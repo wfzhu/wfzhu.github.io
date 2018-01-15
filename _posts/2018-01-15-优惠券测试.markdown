@@ -1,0 +1,50 @@
+---
+layout: post
+title: 促销消息总结
+date: 2018-01-15 13:32:20 +0300
+tags: [促销]
+---
+# 促销消息总结
+## 一、优惠券的状态改变
+### 1.订单支付成功（消息监听）
+- 修改使用的优惠券状态:已使用，已激活，未锁定
+- 修改赠送的优惠券状态:未使用，已激活，未锁定
+```
+//订单支付成功队列监听（hmqu.couponConfirm）
+com.hand.hmall.controller.SaleNoAuthController#giveCoupon
+```
+### 2.订单取消（消息监听）
+- 释放优惠券
+    - 使用的优惠券状态改为:未使用，已激活，未锁定，
+    - 删除赠送的优惠券
+- 释放用户限购数量
+
+```
+//订单取消队列监听(hmqu.couponCancel)
+com.hand.hmall.queue.CouponCancelQueue
+//订单取消队列监听-用于订单提交时促销活动不一致，用于回滚优惠券状态(hmqu.couponListCancel)
+com.hand.hmall.queue.CouponListCancelQueue
+```
+
+## 二、活动状态改变（主要是变成失效）
+### 1.促销活动失效
+- 前X件Y元/折 到达上限时
+- 赠品活动赠送完时
+- 优惠券发放（促销赠送、URL兑换、兑换码兑换）到达发放总数上限
+
+```
+//给hap发送消息使促销活动失效（hmqu.activityStatusChange）
+com.hand.hmall.service.impl.ActivityServiceImpl#updateActivityStatus
+```
+### 2.抽奖活动失效
+- 用户点击抽奖按钮时查询抽奖活动总数是否到达上限
+```
+//给hap发送消息使抽奖活动失效（hmqu.drawStatusChange）
+com.hand.hmall.service.impl.DrawServiceImpl#checkDrawMaxQty
+```
+
+### 3.优惠券活动失效（暂时没有代码逻辑）
+- 促销赠送达到该优惠券发放上限
+- URL兑换达到该优惠券发放上限
+- 兑换码兑换达到该优惠券发放上限
+- 用户抽奖获得达到该优惠券发放上限
