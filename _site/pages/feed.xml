@@ -1,14 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>闫肃的博客</title>
-    <description>闫肃的博客
+    <title>晓风的博客</title>
+    <description>晓风的博客
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Jan 2018 12:09:17 +0800</pubDate>
-    <lastBuildDate>Wed, 17 Jan 2018 12:09:17 +0800</lastBuildDate>
+    <pubDate>Wed, 17 Jan 2018 16:44:52 +0800</pubDate>
+    <lastBuildDate>Wed, 17 Jan 2018 16:44:52 +0800</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>使用jekyll配置githup-page</title>
+        <description>&lt;h1 id=&quot;使用jekyll-bootstrap&quot;&gt;使用Jekyll-bootstrap&lt;/h1&gt;
+&lt;h2 id=&quot;一创建github账号与仓库&quot;&gt;一、创建github账号与仓库&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;1.申请账号 &lt;a href=&quot;https://github.com/&quot;&gt;官方地址&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;2.创建仓库
+    &lt;ul&gt;
+      &lt;li&gt;在你的https://github.com主页新建一个仓库 名字为USERNAME.github.io，USERNAME为你的用户名(下同)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;二安装jekyll-bootstrap&quot;&gt;二、安装Jekyll-Bootstrap&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//克隆到本地
+git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com  
+cd USERNAME.github.com  
+//将仓库地址设置为自己之前建立的地址
+git remote set-url origin https://github.com/USERNAME/USERNAME.github.com.git  
+git push origin master  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;稍等一会访问: https://USERNAME.github.io&lt;/p&gt;
+
+&lt;h2 id=&quot;三本地安装jekyll&quot;&gt;三、本地安装Jekyll&lt;/h2&gt;
+&lt;p&gt;本地安装Jekyll可以用于本地测试&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;windows 参考如果无法安装可参考Liux或mac安装 http://blog.csdn.net/itmyhome1990/article/details/41982625&lt;/li&gt;
+  &lt;li&gt;mac 安装&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~ $ gem install jekyll
+~ $ jekyll new myblog
+~ $ cd myblog
+~ $ jekyll server
+# =&amp;gt; Now browse to http://localhost:4000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;官方中文地址:https://www.jekyll.com.cn/&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;本地启动：~ $ jekyll server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 17 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/01/17/jekyll%E5%AE%89%E8%A3%85.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/01/17/jekyll%E5%AE%89%E8%A3%85.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>HELLO JAVA</title>
+        <description>&lt;h2 id=&quot;pro-git&quot;&gt;Pro Git&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/book-pro-git.jpg&quot; alt=&quot;cover&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://git-scm.com/book&quot;&gt;阅读地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-little-mongodb-book&quot;&gt;The Little Mongodb Book&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/book-the-little-mongodb-book.png&quot; alt=&quot;cover&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/karlseguin/the-little-mongodb-book/blob/master/en/mongodb.markdown&quot;&gt;阅读地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;这本书非常之简洁，读起来非常易懂，其实这还归功于MongoDB的简洁。NoSQL与MySQL最大的区别在于它是为一些特定的场景设计的，如MongoDB、Redis、Cassandra等。MongoDB是其中更加通用的一个方案，从MySQL往MongoDB转，几乎不需要太大变化。&lt;/p&gt;
+
+&lt;h2 id=&quot;白帽子讲web安全&quot;&gt;白帽子讲Web安全&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/book-the-safety-of-web-by-white-hat.jpg&quot; alt=&quot;cover&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://book.douban.com/subject/10546925/&quot;&gt;购买地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;浪潮之巅&quot;&gt;浪潮之巅&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/book-on-top-of-tides.jpg&quot; alt=&quot;cover&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://book.douban.com/subject/6709783/&quot;&gt;购买地址&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 17 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/01/17/hell-java1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/01/17/hell-java1.html</guid>
+        
+        
+        <category>JAVA</category>
+        
+      </item>
     
       <item>
         <title>HELLO JAVA</title>
@@ -1407,122 +1497,6 @@ test          l2tpd   test            *
         <pubDate>Mon, 07 Nov 2016 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2016/11/07/credit-cards-in-usa.html</link>
         <guid isPermaLink="true">http://localhost:4000/2016/11/07/credit-cards-in-usa.html</guid>
-        
-        <category>essay</category>
-        
-        
-        <category>生活</category>
-        
-      </item>
-    
-      <item>
-        <title>Olympic National Park 自驾游</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;Olympic National Park 是美国10大国家公园之一，体验过以后真的感觉，要雪山有雪山，要湖水有湖水，要雨林有雨林，几乎囊括了大部分客观上的户外景观。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;iframe src=&quot;https://www.google.com/maps/d/u/0/embed?mid=1K4IccR4RPigSMmKdjA2LLlJ5JYA&quot; width=&quot;100%&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;nourish-sequim&quot;&gt;Nourish Sequim&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-nourish-sequim.png&quot; alt=&quot;Nourish Sequim&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;hurricane-ridge&quot;&gt;Hurricane Ridge&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-hurricane-ridge.png&quot; alt=&quot;Hurricane Ridge&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-hurricane-ridge-2.png&quot; alt=&quot;Hurricane Ridge&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-hurricane-ridge-3.png&quot; alt=&quot;Hurricane Ridge&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;la-push-beach&quot;&gt;La Push Beach&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-la-push.png&quot; alt=&quot;La Push&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;sol-duc-falls&quot;&gt;Sol Duc Falls&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-sol-duc-falls.png&quot; alt=&quot;Sol Duc Falls&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;deer-lake&quot;&gt;Deer Lake&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-deer-lake.png&quot; alt=&quot;Deer Lake&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;hoh-rain-forest&quot;&gt;Hoh Rain Forest&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-hoh-rain-forest.png&quot; alt=&quot;Hoh Rain Forest&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;ruby-beach&quot;&gt;Ruby Beach&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-ruby-beach.png&quot; alt=&quot;Ruby Beach&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 02 Jul 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/07/02/olympic-national-park-travel.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/07/02/olympic-national-park-travel.html</guid>
-        
-        <category>essay</category>
-        
-        
-        <category>生活</category>
-        
-      </item>
-    
-      <item>
-        <title>San Diego 自驾游</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;San Diego 就在 Los Angeles 车程不到2小时的地方，本来是来 LA 以后首选的旅行城市，拖到现在才去。总的说来，这个城市不大，每个地方都很容易到达，特别适合生活。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;iframe src=&quot;https://www.google.com/maps/d/u/0/embed?mid=1i4ygqIUA64JFqT8JCkdKUciF4go&quot; width=&quot;100%&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;carlsbad-flower-fields&quot;&gt;Carlsbad Flower Fields&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-carlsbad-flower-fields.png&quot; alt=&quot;Carlsbad Flower Fields&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;university-of-california-san-diego&quot;&gt;University of California San Diego&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-university-of-san-diego.png&quot; alt=&quot;University of San Diego&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;san-diego-temple&quot;&gt;San Diego Temple&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-san-diego-temple.png&quot; alt=&quot;San Diego Temple&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;la-jolla-cove&quot;&gt;La Jolla Cove&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-la-jolla-cove.png&quot; alt=&quot;La Jolla Cove&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;seaworld&quot;&gt;SeaWorld&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-seaworld-san-diego.png&quot; alt=&quot;SeaWorld&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;uss-midway-museum&quot;&gt;USS Midway Museum&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-uss-midway-museum.png&quot; alt=&quot;USS Midway Museum&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-cute-girl.png&quot; alt=&quot;Cute girl&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;sunset-cliffs-park&quot;&gt;Sunset Cliffs Park&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-sunset-cliffs-park.png&quot; alt=&quot;Sunset Cliffs Park&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;old-town&quot;&gt;Old Town&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-old-town.png&quot; alt=&quot;Old Town&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;potato-chip-rock&quot;&gt;Potato Chip Rock&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-potato-chip-rock.png&quot; alt=&quot;Potato Chip Rock&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;美食严重推荐&quot;&gt;美食严重推荐&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Great Plaza Buffet&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sun, 13 Mar 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/03/13/san-diego-travel.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/03/13/san-diego-travel.html</guid>
         
         <category>essay</category>
         
