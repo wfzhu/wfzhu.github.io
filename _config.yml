@@ -1,29 +1,50 @@
-# Jekyll configuration
+# Site settings
+title: 闫肃的博客
+email: suyan0830@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  闫肃的博客
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://yansu.org # the base hostname & protocol for your site
+rss_url: /pages/feed.xml
+author: Su Yan
 
-name: xiaofeng
-description: Welcome to xiaofeng
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
 
-# url is currently only used only for the RSS feed in feed.xml
-url: https://github.com/wfzhu
+# Social account
+twitter: suyan404
+weibo: suyan0830
+github: suyan
+instagram: suyan404
+linkedin: suyan404
 
-# baseurl will often be '', but for a project page on gh-pages, it needs to
-# be the project name.
-# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
-#     run it like so: jekyll serve --baseurl=''
-baseurl: ''
-## default date_format
-date_format: 
-  title: "%B-%-d-%Y"
-  archive: "%b"
-  categories: "%b-%Y"
-  tag: "%b-%Y"
-# Language
-lan: "en" 
+# avatar and Favicon
+avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
+favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
 
-paginate: 10
+# disqus config
+disqus:
+  shortname: suyan-zh
 
-highlighter: rouge
+# google analytics config
+ga:
+  id: UA-54767140-1
+  url: yansu.org
+
+# Build settings
+permalink: /:year/:month/:day/:title.html
 markdown: kramdown
-gems: ['jekyll-paginate']
+highlighter: rouge
+mathjax: disabled
+sass:
+  style: compressed
 
-exclude: ['README.md', 'LICENSE', "*.bak"]
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+

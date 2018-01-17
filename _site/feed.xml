@@ -1,572 +1,1363 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>xiaofeng</title>
-		<description>Welcome to xiaofeng</description>
-		<link>https://github.com/wfzhu</link>
-		<atom:link href="https://github.com/wfzhu/feed.xml" rel="self" type="application/rss+xml" />
-		
-			<item>
-				<title>一天十亿调用量电商网关架构实践</title>
-				<description>&lt;p&gt;618 大促，我们的网关承载了几十亿的流量和调用，在这种情况下，网关系统必须保证整个系统的稳定性和高可用，保证高性能和可靠，以支撑业务。我们面临的是一个非常复杂的问题，基于这种复杂问题，怎样做到很好地提高它的性能和稳定性、复杂技术之间怎么整合保证整体网关的高可用，是本文的重点。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-01-17T12:09:17+08:00</updated><id>http://localhost:4000/</id><title type="html">闫肃的博客</title><subtitle>闫肃的博客
+</subtitle><author><name>Su Yan</name></author><entry><title type="html">HELLO JAVA</title><link href="http://localhost:4000/2018/01/17/hell-java.html" rel="alternate" type="text/html" title="HELLO JAVA" /><published>2018-01-17T00:00:00+08:00</published><updated>2018-01-17T00:00:00+08:00</updated><id>http://localhost:4000/2018/01/17/hell-java</id><content type="html" xml:base="http://localhost:4000/2018/01/17/hell-java.html">&lt;h2 id=&quot;pro-git&quot;&gt;Pro Git&lt;/h2&gt;
 
-&lt;p&gt;1&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/book-pro-git.jpg&quot; alt=&quot;cover&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;网关涵盖技术&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://git-scm.com/book&quot;&gt;阅读地址&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;1.1 网关系统&lt;/p&gt;
+&lt;h2 id=&quot;the-little-mongodb-book&quot;&gt;The Little Mongodb Book&lt;/h2&gt;
 
-&lt;p&gt;网关系统主要有两种：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/book-the-little-mongodb-book.png&quot; alt=&quot;cover&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;第一种叫客户端网关主要用来接收一些客户端的请求，也就是 APP 的服务端；&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/karlseguin/the-little-mongodb-book/blob/master/en/mongodb.markdown&quot;&gt;阅读地址&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;第二种叫开放网关，主要是公司（比如京东）对于第三方合作伙伴提供接口。&lt;/p&gt;
+&lt;p&gt;这本书非常之简洁，读起来非常易懂，其实这还归功于MongoDB的简洁。NoSQL与MySQL最大的区别在于它是为一些特定的场景设计的，如MongoDB、Redis、Cassandra等。MongoDB是其中更加通用的一个方案，从MySQL往MongoDB转，几乎不需要太大变化。&lt;/p&gt;
 
-&lt;p&gt;这两种不同网关所使用的技术非常类似。&lt;/p&gt;
+&lt;h2 id=&quot;白帽子讲web安全&quot;&gt;白帽子讲Web安全&lt;/h2&gt;
 
-&lt;p&gt;流量比较大的网关面临的难点包括：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/book-the-safety-of-web-by-white-hat.jpg&quot; alt=&quot;cover&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;第一，网关系统需要扛几十亿的流量调用，接口的平稳运行、每一个接口在后端服务之后的性能耗损都非常重要。比如我们使用了一个 Redis 集群，然后构建了两个机房，每一个机房都搭建了一个 Redis 集群，这样的话就能够很好地保证高可用。在面对一个瞬间流量的时候，我们采用了一些缓存技术，或者更前置的 Nginx+lua+Redis 技术，让这种大流量应用能够脱离开 JVM 的依赖。还有我们需要梳理各个接口，通过降级的策略把一些弱依赖的接口进行降级，从而保证核心应用的可用。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://book.douban.com/subject/10546925/&quot;&gt;购买地址&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;第二，网关系统其实就是一个把 Http 请求拓展到后端服务的过程。我们的网关承接了一千以上的后端服务接口，面对这种情况，怎样做到服务与服务之间相互不影响？架构层面怎样能够杜绝蝴蝶效应、防止雪崩？就是说当一个接口出现问题的时候，不至于影响到其他接口的健康运行。这个说起来简单，但实际却不然。&lt;/p&gt;
+&lt;h2 id=&quot;浪潮之巅&quot;&gt;浪潮之巅&lt;/h2&gt;
 
-&lt;p&gt;一千个以上的接口，每个接口性能都不一致，而且每个接口所依赖的外部资源、数据库缓存等都不一样，几乎每天都会出现各种各样的问题，我们怎样通过一些隔离技术、治理技术等，保证当这些接口出现问题的时候，不会影响到全局？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/book-on-top-of-tides.jpg&quot; alt=&quot;cover&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;第三，我们对外暴露了一千个服务接口，所有接口的后面意味着几十个甚至上百个团队每天在不停地开发，每天都可能上线新的需求。面对这么复杂的情况，我们不可能每次后端服务器有任何修改，都需要有网关的修改或上线，这样网关会变得非常脆弱，稳定性极低。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://book.douban.com/subject/6709783/&quot;&gt;购买地址&lt;/a&gt;&lt;/p&gt;</content><author><name>Su Yan</name></author><category term="JAVA" /><summary type="html">Pro Git</summary></entry><entry><title type="html">Docker 使用总结</title><link href="http://localhost:4000/2017/02/21/docker-summary.html" rel="alternate" type="text/html" title="Docker 使用总结" /><published>2017-02-21T00:00:00+08:00</published><updated>2017-02-21T00:00:00+08:00</updated><id>http://localhost:4000/2017/02/21/docker-summary</id><content type="html" xml:base="http://localhost:4000/2017/02/21/docker-summary.html">&lt;h2 id=&quot;docker-基本概念&quot;&gt;Docker 基本概念&lt;/h2&gt;
 
-&lt;p&gt;我们采用了一个动态接入的技术，让后端的网关能够通过一种接入的协议进行无缝接入，之后通过一些动态代理的方式，直接让后端的接口，不管做任何修改或上线，都可以通过后端管理平台从网关上对外进行透传发布，很好地解决了我们网关所面临的依赖于后端接口服务的上线问题。&lt;/p&gt;
+&lt;h3 id=&quot;镜像-image&quot;&gt;镜像 Image&lt;/h3&gt;
 
-&lt;p&gt;1.2 网关涵盖技术&lt;/p&gt;
+&lt;p&gt;镜像是一些打包好的已有的环境，可以被用来启动和创建容器，本身不能被直接修改。&lt;/p&gt;
 
-&lt;p&gt;网关的四个技术方向：&lt;/p&gt;
+&lt;h3 id=&quot;容器-container&quot;&gt;容器 Container&lt;/h3&gt;
 
-&lt;p&gt;第一，统一接入。就是前端（包括 APP 或其他来源）的流量，能够都在统一网络层进行接入。这一层所面临的问题是：高性能透传、高并发接入、高可效性，以及当前端流量来了之后，怎样能够进行一个负载的往后端的转发。&lt;/p&gt;
+&lt;p&gt;容器是镜像的实例化，是可以修改的，但是都是临时修改。&lt;/p&gt;
 
-&lt;p&gt;第二，流量管控，主要指流量治理部分。面对海量流量，我们怎样通过一些防刷技术，保障网关不被大流量冲垮；以及怎样通过一些像限流、降级、熔断等技术，对网关进行全方位保护。&lt;/p&gt;
+&lt;h3 id=&quot;容器启动过程&quot;&gt;容器启动过程&lt;/h3&gt;
 
-&lt;p&gt;第三，协议适配。就是前文提到的，网关会透传后端上千个服务，而这些服务一定不是每一个都需要网关去开发配置的。我们通过一个协议适配的转换，让后端的各种服务通过我们指定的协议、通过 http 的方式从网关开放出去，当然网关不单单是 http 协议，还有一些 TCP 的。京东内部的协议相对比较统一，有 Http 的 restful 的协议，也有 JSF 的接口，JSF 是京东内部自研的一个框架，一个 RPC 调用框架，和 double 是类似的，然后基于注册发现的一个 rpc 框架。&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;检查本地是否存在指定的镜像，不存在就从公有仓库下载&lt;/li&gt;
+  &lt;li&gt;利用镜像创建并启动一个容器&lt;/li&gt;
+  &lt;li&gt;分配一个文件系统，并在只读的镜像层外面挂载一层可读写层&lt;/li&gt;
+  &lt;li&gt;从宿主主机配置的网桥接口中桥接一个虚拟接口到容器中去&lt;/li&gt;
+  &lt;li&gt;从地址池配置一个 ip 地址给容器&lt;/li&gt;
+  &lt;li&gt;执行用户指定的应用程序&lt;/li&gt;
+  &lt;li&gt;执行完毕后容器被终止&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;第四，安全防护。这一部分对于网络来说非常重要，因为网关是整个公司对外的一个出口，在这一层我们要做一些防刷，比如防清洗一些恶意流量、做一些黑名单，当有一些恶意流量的话，通过限制 IP 等限制手段把它拒绝在整个网关之外，防止这些恶意流量把网关冲垮。&lt;/p&gt;
+&lt;h2 id=&quot;docker-常用命令&quot;&gt;Docker 常用命令&lt;/h2&gt;
 
-&lt;p&gt;2&lt;/p&gt;
+&lt;h3 id=&quot;image-操作&quot;&gt;Image 操作&lt;/h3&gt;
 
-&lt;p&gt;自研网关架构&lt;/p&gt;
+&lt;h4 id=&quot;基本操作&quot;&gt;基本操作&lt;/h4&gt;
 
-&lt;p&gt;2.1 自研网关架构&lt;/p&gt;
-
-&lt;p&gt;我们的自研网关架构主要分为三层。&lt;/p&gt;
-
-&lt;p&gt;第一层：接入层。主要负责一些长短链接的接入、限流、黑白名单、路由、负载均衡、容灾切换等。这一层所采用的技术是 Nginx+lua 的方式。&lt;/p&gt;
-
-&lt;p&gt;第二层：分发层（或者叫：网关的业务层）。它更多的是 NIO+Serviet3 异步的技术。在这一层中又分为几个部分。&lt;/p&gt;
-
-&lt;p&gt;● 最上层部分是数据校验，在这一层会做一些签名的校验、时间的校验、和版本、方法等。&lt;/p&gt;
-
-&lt;p&gt;●&lt;/p&gt;
-
-&lt;p&gt;下面一层叫泛化调用层，主要是把网关对外暴露的 restful 请求转换成京东内部的协议，进行一个动态适配调用的过程。这一块我们更多使用的是一些缓存的技术，线程隔离、熔断等技术也都是在这一层实现的。因为有大量数据和协议的转换，所以这一层用了多使用缓存的技术，我们网关层所有的数据都不会直接穿透到 DB，而是采用一个叫异构数据的方式直接用缓存去做的。&lt;/p&gt;
-
-&lt;p&gt;泛化层中间有两块：一个叫主动通知，另一个是沙箱测试。主动通知很好理解，就是我们会通过这种 TCP 的下行通道及时通知到客户端，发一些像京东账户优惠券或提醒等；沙箱测试主要是说我们在一些接口发布上线之前，进行一个外部的测试。&lt;/p&gt;
-
-&lt;p&gt;如图，最右侧部分是服务降级、日志记录、监控告警，这三个都是我们整个网关的支撑系统。服务降级是说当有些服务出现问题，第一时间把它降调；日志是给我们排查问题用的；监控告警在下文会重点介绍，因为一个网关的可用性很大方面是通过监控系统来完善的，没有监控系统、没有告警，就像没有眼睛一样，没办法知道任何事。&lt;/p&gt;
-
-&lt;p&gt;第三层：后端各种各样的业务 API（业务接口）。这些接口通过网关对外进行暴露。&lt;/p&gt;
-
-&lt;p&gt;整个网关大体上分为以上三层，最上面的接入层、中间是网关的分发层，以及业务校验、业务逻辑层，然后通过网关透传请求到后端服务。&lt;/p&gt;
-
-&lt;p&gt;除了这三层之外，我们再看两边的系统，都是我们整个网关比较核心和重要的支撑。&lt;/p&gt;
-
-&lt;p&gt;● 网关注册中心。后端各种各样的接口可以通过网关注册中心对外进行发布，这个系统有一个类似管理界面，只要后端的 API 服务按照固有的协议进行一个编写，如果格式 OK 的话上传到管理后台，一键就可以发布到线上。当然接口发布之前会有一个测试。&lt;/p&gt;
-
-&lt;p&gt;● OA 鉴权中心。这一块主要是做鉴权用的，像数据校验层的很多签名的校验等安全校验都是在这一层统一做的。&lt;/p&gt;
-
-&lt;p&gt;2.2 技术栈&lt;/p&gt;
-
-&lt;p&gt;我们的网关系统所涉及到的一些技术栈：第一是接入层 Nginx+lua 技术；第二是 NIO+Serviet3 异步的技术；第三是分离技术；第四是降级限流；第五是熔断技术；第六是缓存，哪些地方该加缓存，哪些地方可以直接读库；第七是异构数据；第八是快速失败；最后是监控统计，这是整个高可用网关系统里非常重要的一部分。&lt;/p&gt;
-
-&lt;p&gt;下文会针对这些技术所适用的场景进行深入探讨和分析，包括我们用这些技术解决什么问题。&lt;/p&gt;
-
-&lt;p&gt;3&lt;/p&gt;
-
-&lt;p&gt;基本思路及过程改进点&lt;/p&gt;
-
-&lt;p&gt;实践 1 Nginx 层统一接入&lt;/p&gt;
-
-&lt;p&gt;先看网关整个线上的部署架构，先通过一个软负载 LVS 进入到整个京东的网关，第一层是核心 Nginx，经过核心 Nginx 之后就是后面的业务 Nginx，然后通过业务 Nginx 把我们的请求透传到后端的服务器。&lt;/p&gt;
-
-&lt;p&gt;核心 Nginx 主要是前端流量的分配，比如限流、防刷都是在这层去做。下层是业务 Nginx，主要的 Nginx+lua 的逻辑在这一层实现。这一层还有能减轻核心 Nginx 压力、CPU 压力的作用，而且一些 lua 的应用逻辑，比如限流、防刷、鉴权、降级都是在这一层做的。&lt;/p&gt;
-
-&lt;p&gt;为什么要加上 Nginx+lua 这一层？相较于 Tomcat 等，Nginx 其实是一个能扛特别大并发流量的服务器。基于这种状况我们之前出现过问题，当这种并发流量特别大的时候，一旦后面出现单个机有问题，哪怕你针对这个接口做了降级，但其实真正流量还是到了 Tomcat 层的 JVM 里，当流量很大的时候，很难通过 JVM 去消化掉这块东西，这样导致的结果是：当你的 Tomcat 出现问题了，你很难通过重启去解决这个问题，因为流量会一直存在，这台 Tomcat 出问题了，&lt;/p&gt;
-
-&lt;p&gt;重启完之后是把所有行动都释放了，但是它们就像病毒一样，会来回传染，你重启了一批，这批马上又被传染到。Nginx 天然就是这种 NIO 异步的方式，能够非常好地支持大并发的业务需求。所以我们把一些核心的，比如降级、流控等，都放在这一层，让它替我们在最前端把流量防住。&lt;/p&gt;
-
-&lt;p&gt;实践 2 引入 NIO、利用 Servlet3 异步化&lt;/p&gt;
-
-&lt;p&gt;第二个实践是在 Tomcat 层引入了 NIO，用了一个 JDK7+TOMCAT7+Servlet3 的配置，让同步请求变得异步化，然后利用 NIO 的多路复用处理技术，让我们能够同时处理更高的并发数。&lt;/p&gt;
-
-&lt;p&gt;利用 Servlet3 异步化之后可以提升吞吐量，但单个请求的响应时间会略微变长，不过这种损耗是可以忍受的，因为这会带来整个应用吞吐量的增加和灵活性的增强。还是非常值得我们使用的。&lt;/p&gt;
-
-&lt;p&gt;具体采用策略：业务方法开启异步化上下文 AsynContext; 释放 tomcat 当前处理线程；tomcat 该线程被释放，然后用于下次请求的处理，提高其吞吐量；在 AsynContext 环境中完成业务方法的处理，调用其 complete 方法，将响应写回响应流。这样可以提高 tomcat 业务逻辑的可能性，让我们在这一层非常少的线程数就能处理更多的请求，而不至于当流量非常大的时候会被压垮。&lt;/p&gt;
-
-&lt;p&gt;实践 3 分离之术&lt;/p&gt;
-
-&lt;p&gt;本节将在所有分离技术中挑两个比较重点的进行分享。&lt;/p&gt;
-
-&lt;p&gt;请求解析和业务处理分离&lt;/p&gt;
-
-&lt;p&gt;第一个是通过 NIO 的方式，把请求解析的线程和后面处理的业务线程进行分离。&lt;/p&gt;
-
-&lt;p&gt;请求由 tomcat 单线程处理，在 NIO 模式下可以用非常少量线程处理大量链接情况。业务逻辑处理和生成响应都是由另外的 tomcat 线程池处理，从而跟请求线程隔离。这里的业务线程池还可以进一步隔离，不同业务设置不同的线程池。&lt;/p&gt;
-
-&lt;p&gt;业务线程池分离&lt;/p&gt;
-
-&lt;p&gt;第二个是业务线程池分离，就是通过一个线程的隔离技术，把不同的接口或不同类型的接口进行隔离。比如订单相关的接口，拿 20 个单独线程去处理；商品相关的接口，拿 10 个单独的线程去处理，这样的话就可以让不同的接口之间互不影响，如果订单这块有一个出了问题，最多消耗它自己，不会影响到其他接口的线程的调用。&lt;/p&gt;
-
-&lt;p&gt;具体的线程隔离可以根据业务来指定一组线程的数量，这几个线程是为固定接口准备的，当这个接口出现问题，它就把自己的线程数用掉了，不会去占用其他接口的线程，这样起到了线程隔离的作用，让单个 API 出问题的时候不会影响到其他。&lt;/p&gt;
-
-&lt;p&gt;实践 4 降级&lt;/p&gt;
-
-&lt;p&gt;降级主要是说当有某个接口出现问题，我们能够把这个接口直接降调，让它调用直接返回，不会用到其他应用。还有就是如果某一块弱一点的业务逻辑出现问题，我们直接把这块逻辑降调，不至于影响到其他的黄金逻辑。&lt;/p&gt;
-
-&lt;p&gt;降级怎么做？&lt;/p&gt;
-
-&lt;p&gt;首先，降级开关要集中化管理，比如通过 zookeeper 推送到各个应用服务。这样才能在出现问题的第一时间找到对应开关做降级处理。&lt;/p&gt;
-
-&lt;p&gt;一个基于开发降级的统一配置本身这个系统要是高可用的、支持多维度的缓存，比如我们如果用 zookeeper 实现，首先 zookeeper 会有数据库存储，再上面会有一个本地缓存。再就是我们会有一个快照，如果 zookeeper 读不到缓存，会通过快照去加载进来一些托底的数据，以保证开发一旦触发之后能够在第一时间响应。而我们的开关也不至于会成为其他系统的问题，它是非常弱化、非常薄的一层。&lt;/p&gt;
-
-&lt;p&gt;精细化流量控制&lt;/p&gt;
-
-&lt;p&gt;说完开关、流量控制和降级之后，我们来看通过多维度的流量控制和降级的策略，比如按照单个 API 或 API+ 地域、运营商等维度进行控制。一旦出问题了，我们会把多种组合方式进行降级，还可以根据秒 / 分钟级等不同维度进行流量控制，从而达到精细化流量管理。&lt;/p&gt;
-
-&lt;p&gt;优雅降级&lt;/p&gt;
-
-&lt;p&gt;说到降级，前面说的更多的是技术层面的，在业务层面的话，我们也要讲究优雅降级。我们不能说这个逻辑一旦建立之后就直接返回前端 502，这肯定是不友好的。我们肯定会跟前端进行沟通，比如降级之后反馈给前端一个对应的错误码，或者给用户反馈一个提示等操作指令，这样能够让用户体验更好一些。&lt;/p&gt;
-
-&lt;p&gt;实践 5 限流&lt;/p&gt;
-
-&lt;p&gt;恶意请求、恶意攻击，恶意的请求流量可以只访问 cache，恶意的 IP 可以使用 nginx 层的 deny 进行屛蔽；&lt;/p&gt;
-
-&lt;p&gt;防止流程超出系统的承载能力，虽然会预估但总有意外，如果没有限流，当超过系统承载峰值的时候，整个系统就会打垮。&lt;/p&gt;
-
-&lt;p&gt;实践 6 熔断&lt;/p&gt;
-
-&lt;p&gt;当我们的后端机构出现问题了，达到某个阀值了，系统就能够自动进行关闭降级，这是熔断的大体思路。我们会有更灵活的配置：比如当某个接口接连三次访问超时或返回错误的话就自动熔断；也可以是配置一些超时间，比如连续三次这种方法调用的性能都超过了 50 毫秒，就会自动对这个方法进行熔断，熔断之后就相当于降级了，再次调用的话会返回失败，就是直接拒绝返回了。&lt;/p&gt;
-
-&lt;p&gt;熔断之后还可以有一个设置：比如 5 秒或一分钟之后出来一个半打开状态，再次醒来之后，它会去试探一下当天这个服务是否已经 OK 了，如果没有问题了，它就会去把你之前熔断的 API 业务再次打开，能够正常对外提供服务。现在有一些开源的实践，通过这些实践可以很好的做熔断，当然根据这里边的思路，自己也可以实现，这不是特别复杂的事情。&lt;/p&gt;
-
-&lt;p&gt;实践 7 快速失败 - 链路中的超时&lt;/p&gt;
-
-&lt;p&gt;快速失败是非常重要的一个实践，不光是做网关系统，做其他系统也要记住，特别是调用量大的系统，比如注意到整个链条中的超时设置。这是我们每年在做双 11 和 618 备战的时候，都需要重点去 review 的一块东西，包括我们平时在做开发的时候、每一次新模块上线之前，我们都要重点去监控这一块。我们会梳理所有系统对外的依赖，比如网关依赖于我们自己的一些业务的缓存、数据库，更多的是依赖于后端数千个不同的服务。&lt;/p&gt;
-
-&lt;p&gt;这种涉及到网络的，我们必须要设置超时间，因为像网关这种调用量比较大的系统，如果不设超时间，有可能它默认时间就是几分钟，这么长时间，一旦有一个机构出问题了，有可能瞬间整个网关系统会全部雪崩掉，任何一个接口都不能对外使用，因为数据量很大，有可能你都来不及降级就已经被冲垮了。&lt;/p&gt;
-
-&lt;p&gt;实践 8 监控统计 - 应用层&lt;/p&gt;
-
-&lt;p&gt;监控统计是网关系统里非常核心的一部分，只有有了监控，有了报警，才能让我们实时了解所有的运营情况、每一个 API 调用的情况。&lt;/p&gt;
-
-&lt;p&gt;监控目标&lt;/p&gt;
-
-&lt;p&gt;第一：保证 7*24 小时守护系统；&lt;/p&gt;
-
-&lt;p&gt;第二：能够实时监控系统的运营状况，比如哪个 API 是不是调用时间过长了？哪个 API 已经熔断了？等等；&lt;/p&gt;
-
-&lt;p&gt;第三：统计数据，分析指标。比如一天过去了，每一个 API 调用情况有没有超时？有没有访问的性能降低等；&lt;/p&gt;
-
-&lt;p&gt;第四：实时报警。因为监控是一部分，发现问题之后能够第一时间通知到我们，让我们能够马上处理也是让系统更加健康的一个方面。&lt;/p&gt;
-
-&lt;p&gt;监控范围&lt;/p&gt;
-
-&lt;p&gt;监控的维度&lt;/p&gt;
-
-&lt;p&gt;第一层：硬件监控。比如系统的 CPU 内存、网卡等。&lt;/p&gt;
-
-&lt;p&gt;第二层：自定义监控。比如直接报警。&lt;/p&gt;
-
-&lt;p&gt;第三层：性能监控。比如每个接口的 TP 指标，TP999 TP99 TP90 TP50 四种性能指标作为 SLA 的参考标准，还有可用率等，这个对于网关来说至关重要。&lt;/p&gt;
-
-&lt;p&gt;第四层：心跳监控。网关系统线上有很多机器，每个机器现在的情况怎样？有没有存货等。&lt;/p&gt;
-
-&lt;p&gt;第五层：业务层监控。比如我们会有一些 JVM 监控，监控 Nginx 连接数等。&lt;/p&gt;
-
-&lt;p&gt;在京东内部有一个很完善的监控体系，叫 UMP 系统，能够帮助我们做各个层级的监控。它主要是提供给我们一些类似于配置的文件，我们配置好之后就可以进行系统的监控，我们在做的时候会通过一些 AOP 代理的方式，对所有的方法进行监控。因为我们是网关，需要大量的后端透传，网关因为是动态地生成这些接口，根本不知道有哪些接口，所以在动态生成接口的时候自动地 AOP 给它注入一个个监控，这样的话就是每一个接口都能够有一个监控。&lt;/p&gt;
-
-&lt;p&gt;说到监控不得不提的是，我们做网关系统就是做透传的，后面有各种各样不同的接口、业务逻辑，每个业务逻辑和接口的性能都需要去监控，然后告知对方让对方去整改的，所以我们除了把这些监控加完之后，有了问题要能够通知到对应的负责人，包括我们自己。所以我们每一天每一周都会有邮件以报表形式发出，让所有系统负责人都知道对应的机构的情况，比如性能是否有问题、是否需要整改等。&lt;/p&gt;
-</description>
-				<pubDate>Tue, 16 Jan 2018 00:00:00 +0800</pubDate>
-				<link>https://github.com/wfzhu/programmer/2018/01/16/%E4%B8%80%E5%A4%A9%E5%8D%81%E4%BA%BF%E8%B0%83%E7%94%A8%E9%87%8F%E7%94%B5%E5%95%86%E7%BD%91%E5%85%B3%E6%9E%B6%E6%9E%84%E5%AE%9E%E8%B7%B5.html</link>
-				<guid isPermaLink="true">https://github.com/wfzhu/programmer/2018/01/16/%E4%B8%80%E5%A4%A9%E5%8D%81%E4%BA%BF%E8%B0%83%E7%94%A8%E9%87%8F%E7%94%B5%E5%95%86%E7%BD%91%E5%85%B3%E6%9E%B6%E6%9E%84%E5%AE%9E%E8%B7%B5.html</guid>
-			</item>
-		
-			<item>
-				<title>How to get beautiful ASCII pics and ASCII text</title>
-				<description>&lt;h1 id=&quot;促销消息总结&quot;&gt;促销消息总结&lt;/h1&gt;
-
-&lt;h2 id=&quot;一优惠券的状态改变&quot;&gt;一、优惠券的状态改变&lt;/h2&gt;
-&lt;h3 id=&quot;1订单支付成功消息监听&quot;&gt;1.订单支付成功（消息监听）&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;修改使用的优惠券状态:已使用，已激活，未锁定&lt;/li&gt;
-  &lt;li&gt;修改赠送的优惠券状态:未使用，已激活，未锁定
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//订单支付成功队列监听（hmqu.couponConfirm）
-com.hand.hmall.controller.SaleNoAuthController#giveCoupon
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;h3 id=&quot;2订单取消消息监听&quot;&gt;2.订单取消（消息监听）&lt;/h3&gt;
-  &lt;/li&gt;
-  &lt;li&gt;释放优惠券
-    &lt;ul&gt;
-      &lt;li&gt;使用的优惠券状态改为:未使用，已激活，未锁定，&lt;/li&gt;
-      &lt;li&gt;删除赠送的优惠券&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;释放用户限购数量&lt;/li&gt;
+  &lt;li&gt;显示本地所有镜像&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//订单取消队列监听(hmqu.couponCancel)
-com.hand.hmall.queue.CouponCancelQueue
-//订单取消队列监听-用于订单提交时促销活动不一致，用于回滚优惠券状态(hmqu.couponListCancel)
-com.hand.hmall.queue.CouponListCancelQueue
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker images
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;二活动状态改变主要是变成失效&quot;&gt;二、活动状态改变（主要是变成失效）&lt;/h2&gt;
-&lt;h3 id=&quot;1促销活动失效&quot;&gt;1.促销活动失效&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;前X件Y元/折 到达上限时&lt;/li&gt;
-  &lt;li&gt;赠品活动赠送完时&lt;/li&gt;
-  &lt;li&gt;优惠券发放（促销赠送、URL兑换、兑换码兑换）到达发放总数上限&lt;/li&gt;
+  &lt;li&gt;搜索一个image&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//给hap发送消息使促销活动失效（hmqu.activityStatusChange）
-com.hand.hmall.service.impl.ActivityServiceImpl#updateActivityStatus
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;2抽奖活动失效&quot;&gt;2.抽奖活动失效&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;用户点击抽奖按钮时查询抽奖活动总数是否到达上限
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//给hap发送消息使抽奖活动失效（hmqu.drawStatusChange）
-com.hand.hmall.service.impl.DrawServiceImpl#checkDrawMaxQty
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;3优惠券活动失效暂时没有代码逻辑&quot;&gt;3.优惠券活动失效（暂时没有代码逻辑）&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;促销赠送达到该优惠券发放上限&lt;/li&gt;
-  &lt;li&gt;URL兑换达到该优惠券发放上限&lt;/li&gt;
-  &lt;li&gt;兑换码兑换达到该优惠券发放上限&lt;/li&gt;
-  &lt;li&gt;用户抽奖获得达到该优惠券发放上限&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-				<pubDate>Mon, 15 Jan 2018 00:00:00 +0800</pubDate>
-				<link>https://github.com/wfzhu/programmer/2018/01/15/%E4%BC%98%E6%83%A0%E5%88%B8%E6%B5%8B%E8%AF%95.html</link>
-				<guid isPermaLink="true">https://github.com/wfzhu/programmer/2018/01/15/%E4%BC%98%E6%83%A0%E5%88%B8%E6%B5%8B%E8%AF%95.html</guid>
-			</item>
-		
-			<item>
-				<title>Read Me</title>
-				<description>&lt;h1 id=&quot;jekyll-xixia&quot;&gt;Jekyll Xixia&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Get it from &lt;a href=&quot;https://github.com/zxixia/jekyll-xixia&quot;&gt;github&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;See the &lt;a href=&quot;http://xixia.info/jekyll-xixia/&quot;&gt;live demo&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;See it &lt;a href=&quot;http://xixia.info/&quot;&gt;in action on my own blog&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A simple and clean Jekyll theme using &lt;a href=&quot;http://getbootstrap.com&quot;&gt;bootstrap&lt;/a&gt;
-(not to be confused with jekyll-bootstrap) that’s easy to modify and very
-modular in component and element reuse.&lt;/p&gt;
-
-&lt;p&gt;The theme works well on mobile phones, using a collapsable nav bar and hiding the
-sidebar. The links pane in the sidebar is available on mobile through the nav menu,
-and you can do the same thing for any other sections added to the sidebar.&lt;/p&gt;
-
-&lt;p&gt;Don’t forget to occassionally merge against my upstream repository so you can get
-the latest changes. Pull requests are encouraged and accepted!&lt;/p&gt;
-
-&lt;h1 id=&quot;preview&quot;&gt;Preview&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;//assets/images/preview.png&quot; alt=&quot;Xixia&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;license&quot;&gt;License&lt;/h1&gt;
-
-&lt;p&gt;The content of this theme is distributed and licensed under a
-&lt;img src=&quot;/assets/images/cc_by_88x31.png&quot; alt=&quot;License Badge&quot; /&gt;
-&lt;a href=&quot;https://creativecommons.org/licenses/by/4.0/legalcode&quot;&gt;Creative Commons Attribution 4.0 License&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This license lets others distribute, remix, tweak, and build upon your work,
-even commercially, as long as they credit you for the original creation. This
-is the most accommodating of licenses offered. Recommended for maximum
-dissemination and use of licensed materials.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker search image_name
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;In other words: you can do anything you want with this theme on any site, just please
-provide a link to &lt;a href=&quot;https://github.com/zxixia/jekyll-xixia&quot;&gt;the original theme on github&lt;/a&gt;
-so I get credit for the original design. Beyond that, have at it!&lt;/p&gt;
-
-&lt;h1 id=&quot;thanks&quot;&gt;Thanks&lt;/h1&gt;
-
-&lt;p&gt;1，&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;2，&lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;3，&lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;4，&lt;a href=&quot;https://github.com/scotte/jekyll-clean&quot;&gt;Jekyll Clean Theme&lt;/a&gt;&lt;/p&gt;
-
-</description>
-				<pubDate>Tue, 19 Sep 2017 00:00:00 +0800</pubDate>
-				<link>https://github.com/wfzhu/other/2017/09/19/README.html</link>
-				<guid isPermaLink="true">https://github.com/wfzhu/other/2017/09/19/README.html</guid>
-			</item>
-		
-			<item>
-				<title>How to get beautiful ASCII pics and ASCII text</title>
-				<description>&lt;h3 id=&quot;1ascii-generator&quot;&gt;1，ASCII Generator&lt;/h3&gt;
-
-&lt;p&gt;In &lt;a href=&quot;http://www.network-science.de/ascii/&quot;&gt;ASCII Generator&lt;/a&gt;, you can generate your ASCII texts。&lt;/p&gt;
-
-&lt;p&gt;Such like the &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;XIXIA&lt;/code&gt;&lt;/strong&gt;！&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-v&quot; data-lang=&quot;v&quot;&gt;____  ___._______  ___.___   _____   
-\   \/  /|   \   \/  /|   | /  _  \  
- \     / |   |\     / |   |/  /_\  \ 
- /     \ |   |/     \ |   /    |    \
-/___/\  \|___/___/\  \|___\____|__  /
-      \_/          \_/            \/ 
-
-------------------------------------
-___   ___  __  ___   ___  __       ___      
-\  \ /  / |  | \  \ /  / |  |     /   \     
- \  V  /  |  |  \  V  /  |  |    /  ^  \    
-  &amp;gt;   &amp;lt;   |  |   &amp;gt;   &amp;lt;   |  |   /  /_\  \   
- /  .  \  |  |  /  .  \  |  |  /  _____  \  
-/__/ \__\ |__| /__/ \__\ |__| /__/     \__\ 
-
-------------------------------------
-__   _________   _______          
-\ \ / /_   _\ \ / /_   _|   /\    
- \ V /  | |  \ V /  | |    /  \   
-  &amp;gt; &amp;lt;   | |   &amp;gt; &amp;lt;   | |   / /\ \  
- / . \ _| |_ / . \ _| |_ / ____ \ 
-/_/ \_\_____/_/ \_\_____/_/    \_\   &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;2chriscom&quot;&gt;2，Chris.com&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.chris.com/ascii/&quot;&gt;Chris.com&lt;/a&gt; collects a lot of ASCII pics, such like the world map：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-v&quot; data-lang=&quot;v&quot;&gt;-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
-           . _..::__:  ,-&quot;-&quot;._        |7       ,     _,.__
-   _.___ _ _&amp;lt;_&amp;gt;`!(._`.`-.    /         _._     `_ ,_/  '  '-._.---.-.__
-&amp;gt;.{     &quot; &quot; `-==,',._\{  \  / {)      / _ &quot;&amp;gt;_,-' `                mt-2_
-  \_.:--.       `._ )`^-. &quot;'       , [_/(                       __,/-'
- '&quot;'     \         &quot;    _L        oD_,--'                )     /. (|
-          |           ,'          _)_.\\._&amp;lt;&amp;gt; 6              _,' /  '
-          `.         /           [_/_'` `&quot;(                &amp;lt;'}  )
-           \\    .-. )           /   `-'&quot;..' `:.#          _)  '
-    `        \  (  `(           /         `:\  &amp;gt; \  ,-^.  /' '
-              `._,   &quot;&quot;         |           \`'   \|   ?_)  {\
-                 `=.---.        `._._       ,'     &quot;`  |' ,- '.
-                   |    `-._         |     /          `:`&amp;lt;_|h--._
-                   (        &amp;gt;        .     | ,          `=.__.`-'\
-                    `.     /         |     |{|              ,-.,\     .
-                     |   ,'           \   / `'            ,&quot;     \
-                     |  /              |_'                |  __  /
-                     | |                                  '-'  `-'   \.
-                     |/                                         &quot;    /
-                     \.                                             '
-
-                      ,/            ______._.--._ _..---.---------._
-     ,-----&quot;-..?----_/ )      __,-'&quot;             &quot;                  (
--.._(                  `-----'                                       `-
------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----
-Map (C) 1998 Matthew Thomas. Freely usable if this line is included. &amp;lt;-&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;
-Elephant.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-v&quot; data-lang=&quot;v&quot;&gt;              ___.-~&quot;~-._   __....__
-            .'    `    \ ~&quot;~        ``-.
-           /` _      )  `\              `\
-          /`  a)    /     |               `\
-         :`        /      |                 \
-    &amp;lt;`-._|`  .-.  (      /   .            `;\\
-     `-. `--'_.'-.;\___/'   .      .       | \\
-  _     /:--`     |        /     /        .'  \\
- (&quot;\   /`/        |       '     '         /    :`;
- `\'\_/`/         .\     /`~`=-.:        /     ``
-   `._.'          /`\    |      `\      /(
-                 /  /\   |        `Y   /  \
-           jgs  J  /  Y  |         |  /`\  \
-               /  |   |  |         |  |  |  |
-              &quot;---&quot;  /___|        /___|  /__|
-                     '&quot;&quot;&quot;         '&quot;&quot;&quot;  '&quot;&quot;&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;3welcome-to-lost-in-xixia&quot;&gt;3，Welcome to lost in Xixia&lt;/h3&gt;
-&lt;p&gt;The 404 page of Xixia, is based on ASCII pics and ASCII texts!&lt;/p&gt;
-
-&lt;p&gt;So, warmly welcome you to lost in &lt;a href=&quot;http://xixia.info/welcome-lost-in-xixia&quot;&gt;Xixia&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;thanks&quot;&gt;Thanks：&lt;/h3&gt;
-
-&lt;p&gt;1，&lt;a href=&quot;http://www.chris.com/ascii/&quot;&gt;Chris.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;2，&lt;a href=&quot;http://www.network-science.de/ascii/&quot;&gt;ASCII Generator&lt;/a&gt;&lt;/p&gt;
-
-</description>
-				<pubDate>Fri, 15 Sep 2017 00:00:00 +0800</pubDate>
-				<link>https://github.com/wfzhu/programmer/2017/09/15/ascii-art-and-text.html</link>
-				<guid isPermaLink="true">https://github.com/wfzhu/programmer/2017/09/15/ascii-art-and-text.html</guid>
-			</item>
-		
-			<item>
-				<title>Welcome to Jekyll!</title>
-				<description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-				<pubDate>Tue, 05 Sep 2017 14:10:51 +0800</pubDate>
-				<link>https://github.com/wfzhu/jekyll/2017/09/05/welcome-to-jekyll.html</link>
-				<guid isPermaLink="true">https://github.com/wfzhu/jekyll/2017/09/05/welcome-to-jekyll.html</guid>
-			</item>
-		
-			<item>
-				<title>Readme of Jekyll!</title>
-				<description>&lt;h1 id=&quot;jekyll&quot;&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://rubygems.org/gems/jekyll&quot;&gt;&lt;img src=&quot;https://img.shields.io/gem/v/jekyll.svg&quot; alt=&quot;Gem Version&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://travis-ci.org/jekyll/jekyll&quot;&gt;&lt;img src=&quot;https://img.shields.io/travis/jekyll/jekyll/master.svg?label=Linux%20build&quot; alt=&quot;Linux Build Status&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://ci.appveyor.com/project/jekyll/jekyll/branch/master&quot;&gt;&lt;img src=&quot;https://img.shields.io/appveyor/ci/jekyll/jekyll/master.svg?label=Windows%20build&quot; alt=&quot;Windows Build status&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://codeclimate.com/github/jekyll/jekyll/coverage&quot;&gt;&lt;img src=&quot;https://img.shields.io/codeclimate/coverage/github/jekyll/jekyll.svg&quot; alt=&quot;Test Coverage&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://codeclimate.com/github/jekyll/jekyll&quot;&gt;&lt;img src=&quot;https://img.shields.io/codeclimate/github/jekyll/jekyll.svg&quot; alt=&quot;Code Climate&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://gemnasium.com/jekyll/jekyll&quot;&gt;&lt;img src=&quot;https://img.shields.io/gemnasium/jekyll/jekyll.svg&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://hakiri.io/github/jekyll/jekyll/master&quot;&gt;&lt;img src=&quot;https://hakiri.io/github/jekyll/jekyll/master.svg&quot; alt=&quot;Security&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind &lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;, which you can use to host sites right from your GitHub repositories.&lt;/p&gt;
-
-&lt;h2 id=&quot;philosophy&quot;&gt;Philosophy&lt;/h2&gt;
-
-&lt;p&gt;Jekyll does what you tell it to do — no more, no less. It doesn’t try to outsmart users by making bold assumptions, nor does it burden them with needless complexity and configuration. Put simply, Jekyll gets out of your way and allows you to concentrate on what truly matters: your content.&lt;/p&gt;
-
-&lt;p&gt;See: https://jekyllrb.com/philosophy&lt;/p&gt;
-
-&lt;h2 id=&quot;having-trouble&quot;&gt;Having trouble?&lt;/h2&gt;
-
-&lt;p&gt;See: https://jekyllrb.com/docs/troubleshooting/&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Install&lt;/a&gt; the gem&lt;/li&gt;
-  &lt;li&gt;Read up about its &lt;a href=&quot;https://jekyllrb.com/docs/usage/&quot;&gt;Usage&lt;/a&gt; and &lt;a href=&quot;https://jekyllrb.com/docs/configuration/&quot;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Take a gander at some existing &lt;a href=&quot;https://wiki.github.com/jekyll/jekyll/sites&quot;&gt;Sites&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll/fork&quot;&gt;Fork&lt;/a&gt; and &lt;a href=&quot;https://jekyllrb.com/docs/contributing/&quot;&gt;Contribute&lt;/a&gt; your own modifications&lt;/li&gt;
-  &lt;li&gt;Have questions? Check out our official forum community &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt; or &lt;a href=&quot;https://botbot.me/freenode/jekyll/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#jekyll&lt;/code&gt; on irc.freenode.net&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;下载image&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;code-of-conduct&quot;&gt;Code of Conduct&lt;/h2&gt;
-
-&lt;p&gt;In order to have a more open and welcoming community, Jekyll adheres to a
-&lt;a href=&quot;CODE_OF_CONDUCT.markdown&quot;&gt;code of conduct&lt;/a&gt; adapted from the Ruby on Rails code of
-conduct.&lt;/p&gt;
-
-&lt;p&gt;Please adhere to this code of conduct in any interactions you have in the
-Jekyll community. It is strictly enforced on all official Jekyll
-repositories, websites, and resources. If you encounter someone violating
-these terms, please let a &lt;a href=&quot;https://github.com/orgs/jekyll/teams/affinity-team-captains/members&quot;&gt;team captain&lt;/a&gt; know and we will address it as soon as possible.&lt;/p&gt;
-
-&lt;h2 id=&quot;diving-in&quot;&gt;Diving In&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker pull image_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://import.jekyllrb.com/docs/home/&quot;&gt;Migrate&lt;/a&gt; from your previous system&lt;/li&gt;
-  &lt;li&gt;Learn how the &lt;a href=&quot;https://jekyllrb.com/docs/frontmatter/&quot;&gt;YAML Front Matter&lt;/a&gt; works&lt;/li&gt;
-  &lt;li&gt;Put information on your site with &lt;a href=&quot;https://jekyllrb.com/docs/variables/&quot;&gt;Variables&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Customize the &lt;a href=&quot;https://jekyllrb.com/docs/permalinks/&quot;&gt;Permalinks&lt;/a&gt; your posts are generated with&lt;/li&gt;
-  &lt;li&gt;Use the built-in &lt;a href=&quot;https://jekyllrb.com/docs/templates/&quot;&gt;Liquid Extensions&lt;/a&gt; to make your life easier&lt;/li&gt;
-  &lt;li&gt;Use custom &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;Plugins&lt;/a&gt; to generate content specific to your site&lt;/li&gt;
+  &lt;li&gt;删除镜像&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;See the &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/master/LICENSE&quot;&gt;LICENSE&lt;/a&gt; file.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 05 Sep 2017 14:10:51 +0800</pubDate>
-				<link>https://github.com/wfzhu/jekyll/2017/09/05/reademe-of-jekyll.html</link>
-				<guid isPermaLink="true">https://github.com/wfzhu/jekyll/2017/09/05/reademe-of-jekyll.html</guid>
-			</item>
-		
-			<item>
-				<title>Another copy of the Readme of Jekyll!</title>
-				<description>&lt;h1 id=&quot;jekyll&quot;&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://rubygems.org/gems/jekyll&quot;&gt;&lt;img src=&quot;https://img.shields.io/gem/v/jekyll.svg&quot; alt=&quot;Gem Version&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://travis-ci.org/jekyll/jekyll&quot;&gt;&lt;img src=&quot;https://img.shields.io/travis/jekyll/jekyll/master.svg?label=Linux%20build&quot; alt=&quot;Linux Build Status&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://ci.appveyor.com/project/jekyll/jekyll/branch/master&quot;&gt;&lt;img src=&quot;https://img.shields.io/appveyor/ci/jekyll/jekyll/master.svg?label=Windows%20build&quot; alt=&quot;Windows Build status&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://codeclimate.com/github/jekyll/jekyll/coverage&quot;&gt;&lt;img src=&quot;https://img.shields.io/codeclimate/coverage/github/jekyll/jekyll.svg&quot; alt=&quot;Test Coverage&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://codeclimate.com/github/jekyll/jekyll&quot;&gt;&lt;img src=&quot;https://img.shields.io/codeclimate/github/jekyll/jekyll.svg&quot; alt=&quot;Code Climate&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://gemnasium.com/jekyll/jekyll&quot;&gt;&lt;img src=&quot;https://img.shields.io/gemnasium/jekyll/jekyll.svg&quot; alt=&quot;Dependency Status&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://hakiri.io/github/jekyll/jekyll/master&quot;&gt;&lt;img src=&quot;https://hakiri.io/github/jekyll/jekyll/master.svg&quot; alt=&quot;Security&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind &lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;, which you can use to host sites right from your GitHub repositories.&lt;/p&gt;
-
-&lt;h2 id=&quot;philosophy&quot;&gt;Philosophy&lt;/h2&gt;
-
-&lt;p&gt;Jekyll does what you tell it to do — no more, no less. It doesn’t try to outsmart users by making bold assumptions, nor does it burden them with needless complexity and configuration. Put simply, Jekyll gets out of your way and allows you to concentrate on what truly matters: your content.&lt;/p&gt;
-
-&lt;p&gt;See: https://jekyllrb.com/philosophy&lt;/p&gt;
-
-&lt;h2 id=&quot;having-trouble&quot;&gt;Having trouble?&lt;/h2&gt;
-
-&lt;p&gt;See: https://jekyllrb.com/docs/troubleshooting/&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rmi image_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Install&lt;/a&gt; the gem&lt;/li&gt;
-  &lt;li&gt;Read up about its &lt;a href=&quot;https://jekyllrb.com/docs/usage/&quot;&gt;Usage&lt;/a&gt; and &lt;a href=&quot;https://jekyllrb.com/docs/configuration/&quot;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Take a gander at some existing &lt;a href=&quot;https://wiki.github.com/jekyll/jekyll/sites&quot;&gt;Sites&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll/fork&quot;&gt;Fork&lt;/a&gt; and &lt;a href=&quot;https://jekyllrb.com/docs/contributing/&quot;&gt;Contribute&lt;/a&gt; your own modifications&lt;/li&gt;
-  &lt;li&gt;Have questions? Check out our official forum community &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt; or &lt;a href=&quot;https://botbot.me/freenode/jekyll/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#jekyll&lt;/code&gt; on irc.freenode.net&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;显示镜像历史&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;code-of-conduct&quot;&gt;Code of Conduct&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker history image_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;In order to have a more open and welcoming community, Jekyll adheres to a
-&lt;a href=&quot;CODE_OF_CONDUCT.markdown&quot;&gt;code of conduct&lt;/a&gt; adapted from the Ruby on Rails code of
-conduct.&lt;/p&gt;
+&lt;h4 id=&quot;制作镜像&quot;&gt;制作镜像&lt;/h4&gt;
 
-&lt;p&gt;Please adhere to this code of conduct in any interactions you have in the
-Jekyll community. It is strictly enforced on all official Jekyll
-repositories, websites, and resources. If you encounter someone violating
-these terms, please let a &lt;a href=&quot;https://github.com/orgs/jekyll/teams/affinity-team-captains/members&quot;&gt;team captain&lt;/a&gt; know and we will address it as soon as possible.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build -t image_name DockerfilePath
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;diving-in&quot;&gt;Diving In&lt;/h2&gt;
+&lt;p&gt;这里DockerfilePath是Context上下文目录，在创建的时候会全部上传到Docker Server端，所以这个目录不要太大&lt;/p&gt;
+
+&lt;h4 id=&quot;迁移镜像&quot;&gt;迁移镜像&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://import.jekyllrb.com/docs/home/&quot;&gt;Migrate&lt;/a&gt; from your previous system&lt;/li&gt;
-  &lt;li&gt;Learn how the &lt;a href=&quot;https://jekyllrb.com/docs/frontmatter/&quot;&gt;YAML Front Matter&lt;/a&gt; works&lt;/li&gt;
-  &lt;li&gt;Put information on your site with &lt;a href=&quot;https://jekyllrb.com/docs/variables/&quot;&gt;Variables&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Customize the &lt;a href=&quot;https://jekyllrb.com/docs/permalinks/&quot;&gt;Permalinks&lt;/a&gt; your posts are generated with&lt;/li&gt;
-  &lt;li&gt;Use the built-in &lt;a href=&quot;https://jekyllrb.com/docs/templates/&quot;&gt;Liquid Extensions&lt;/a&gt; to make your life easier&lt;/li&gt;
-  &lt;li&gt;Use custom &lt;a href=&quot;https://jekyllrb.com/docs/plugins/&quot;&gt;Plugins&lt;/a&gt; to generate content specific to your site&lt;/li&gt;
+  &lt;li&gt;保存镜像到文件&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker save image_name -o file.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;See the &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/master/LICENSE&quot;&gt;LICENSE&lt;/a&gt; file.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 05 Sep 2017 14:10:51 +0800</pubDate>
-				<link>https://github.com/wfzhu/jekyll/2017/09/05/another-copy-of-the-reademe-of-jekyll.html</link>
-				<guid isPermaLink="true">https://github.com/wfzhu/jekyll/2017/09/05/another-copy-of-the-reademe-of-jekyll.html</guid>
-			</item>
-		
-	</channel>
-</rss>
+&lt;ul&gt;
+  &lt;li&gt;加载一个tar包的镜像&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker load -i file.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;container-操作&quot;&gt;Container 操作&lt;/h3&gt;
+
+&lt;h4 id=&quot;显示相关&quot;&gt;显示相关&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看运行中的容器&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker ps
+
+# 一行显示全部容器
+docker ps | less -S
+
+# 最近一次启动
+docker ps -l
+
+# 列出所有容器
+docker ps -a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;显示一个运行的容器里面的进程信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker top cid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;显示容器详细信息&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker inspect cid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看容器日志&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs cid
+
+# 实时查看日志输出
+docker logs -f cid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看容器更改&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker diff cid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;查看容器root用户密码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs cid 2&amp;gt;&amp;amp;1 | grep '^User: ' | tail -n1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;运行相关&quot;&gt;运行相关&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;启动容器并执行一个命令（交互）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# -t 终端
+# -i 交互操作
+docker run -it ubuntu /bin/bash
+
+# 运行一个hello word然后就自动关闭
+docker run image_name echo &quot;hello word&quot;
+
+# 命名并启动容器
+docker run --name test ubuntu
+
+# 后台运行一个容器
+docker run -d -it ubuntu
+
+# 映射端口
+docker run -p 8080:8080 ubuntu
+
+# 挂载volumn
+docker run -v ./test:/var/www
+
+# container 内 root 拥有真正root权限
+docker run --privileged=false
+
+# 启动完镜像后自动删除
+docker run -it --rm ubuntu bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;附着到正在运行的容器, 附着完以后退出会导致容器也终止&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker attach cid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;进入正在运行的 container 并且执行&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker exec -it 839a6cfc9496 /bin/bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在容器中运行一段程序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run ubuntu apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;拷贝文件出来&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker cp cid:/container_path to_path  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;修改容器&quot;&gt;修改容器&lt;/h4&gt;
+
+&lt;p&gt;image相当于类，container相当于实例，不过可以动态给实例安装新软件，然后把这个container用commit命令固化成一个image&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;提交一个commit&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker commit cid new_image_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;删除容器&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rm cid
+
+# 强制删除
+docker rm -f cid
+
+# 删除所有容器
+docker rm `docker ps -a -q`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;状态修改&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker start/stop/kill/restart cid
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;更改名字&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rename old new
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;链接容器&quot;&gt;链接容器&lt;/h4&gt;
+
+&lt;p&gt;sonar容器连接到mysql容器，并将mysql容器重命名为db。这样，sonar容器就可以使用db的相关的环境变量了。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it --name sonar -d -link mysql:db tpires/sonar-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;仓库操作&quot;&gt;仓库操作&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;登录到docker仓库&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker login
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;上传镜像&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push new_image_name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;dockerfile-常用命令&quot;&gt;Dockerfile 常用命令&lt;/h2&gt;
+
+&lt;p&gt;有了 Dockerfile 可以自定义一些自己需要的镜像，在熟悉了 Docker 基本操作，然后使用过一些别人提供好的镜像以后，难免需要自己修改一部分。&lt;/p&gt;
+
+&lt;h3 id=&quot;from&quot;&gt;FROM&lt;/h3&gt;
+
+&lt;p&gt;指定基础镜像。例如：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ubuntu&lt;/li&gt;
+  &lt;li&gt;nginx&lt;/li&gt;
+  &lt;li&gt;redis&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;run&quot;&gt;RUN&lt;/h3&gt;
+
+&lt;p&gt;执行一些命令&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN echo '&amp;lt;h1&amp;gt;Hello, Docker!&amp;lt;/h1&amp;gt;' &amp;gt; /usr/share/nginx/html/index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;每个RUN命令都会在容器中建立一层，所以尽量合并多个命令。例如&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN buildDeps='gcc libc6-dev make' \
+    &amp;amp;&amp;amp; apt-get update \
+    &amp;amp;&amp;amp; apt-get install -y $buildDeps \
+    ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;copy&quot;&gt;COPY&lt;/h3&gt;
+
+&lt;p&gt;复制文件到指定目录 source -&amp;gt; target&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;COPY ./package.json /usr/src/app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;cmd&quot;&gt;CMD&lt;/h3&gt;
+
+&lt;p&gt;容器的启动命令&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这个命令可以在启动时被覆盖。另外它也可以为 ENTRYPOINT 提供参数。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;CMD 理论上只能执行一次，如果想要执行两个命令，需要使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; 来连接两个命令，或者使用一个bash文件。更为高级一点的方法是用supervisor来管理&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;entrypoint&quot;&gt;ENTRYPOINT&lt;/h3&gt;
+
+&lt;p&gt;ENTRYPOINT 和 CMD 有一部分重复工作，但是 ENTRYPOINT 可以让容器像软件一样执行。例如&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ENTRYPOINT /bin/echo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在容器启动时，之后增加的内容都属于这个命令的参数。&lt;/p&gt;
+
+&lt;h3 id=&quot;env&quot;&gt;ENV&lt;/h3&gt;
+
+&lt;p&gt;设置环境变量。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ENV key value&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;arg&quot;&gt;ARG&lt;/h3&gt;
+
+&lt;p&gt;构建参数，在容器启动后不会存在。&lt;/p&gt;
+
+&lt;h3 id=&quot;volume&quot;&gt;VOLUME&lt;/h3&gt;
+
+&lt;p&gt;定义匿名卷，以免用户忘了挂载volumn，导致大量写入。这个 Volume 在容器启动前可以添加内容，但是并不是实际操作用户挂载的内容。在用户挂载完 volume 后，原来写在这里的内容会被复制到用户挂载的目录。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意：在 VOLUME 命令之后对这个目录的所有操作，将被忽略。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;expose&quot;&gt;EXPOSE&lt;/h3&gt;
+
+&lt;p&gt;申明端口，可以用来默认映射端口，以及容器间互通。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;EXPOSE 22 80
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;workdir&quot;&gt;WORKDIR&lt;/h3&gt;
+
+&lt;p&gt;指定工作目录。不仅是当前 docker 中的目录，同时也是运行容器时刚刚登录以后的目录。&lt;/p&gt;
+
+&lt;h3 id=&quot;user&quot;&gt;USER&lt;/h3&gt;
+
+&lt;p&gt;指定当前用户。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RUN groupadd -r redis &amp;amp;&amp;amp; useradd -r -g redis redis
+USER redis
+RUN [ &quot;redis-server&quot; ]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;healthcheck&quot;&gt;HEALTHCHECK&lt;/h3&gt;
+
+&lt;p&gt;健康检查&lt;/p&gt;
+
+&lt;h3 id=&quot;onbuild&quot;&gt;ONBUILD&lt;/h3&gt;
+
+&lt;p&gt;当此容器作为别的容器的基础容器时操作内容&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM node:slim
+RUN &quot;mkdir /app&quot;
+WORKDIR /app
+ONBUILD COPY ./package.json /app
+ONBUILD RUN [ &quot;npm&quot;, &quot;install&quot; ]
+ONBUILD COPY . /app/
+CMD [ &quot;npm&quot;, &quot;start&quot; ]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;docker-compose-常用指令&quot;&gt;Docker-compose 常用指令&lt;/h2&gt;
+
+&lt;h3 id=&quot;depends_on&quot;&gt;depends_on&lt;/h3&gt;
+
+&lt;p&gt;这个不仅可以保证build的先后顺序，还可以省去links的设置&lt;/p&gt;
+
+&lt;h3 id=&quot;links&quot;&gt;links&lt;/h3&gt;
+
+&lt;p&gt;和docker run命令一致，主要原因是在每次新开启container的时候，port可能会变，所以有了这个设置可以保证每次都可以绑定到正确的值。&lt;/p&gt;
+
+&lt;h2 id=&quot;实例操作&quot;&gt;实例操作&lt;/h2&gt;
+
+&lt;h3 id=&quot;创建一个lamp的项目&quot;&gt;创建一个LAMP的项目&lt;/h3&gt;
+
+&lt;p&gt;首先是目录结构&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;├── README.md
+├── apache
+│   └── virtualhost.conf
+├── docker-compose.yml
+├── mysql
+│   ├── Dockerfile
+│   └── my.cnf
+├── php
+│   ├── Dockerfile
+│   └── php.ini
+└── src
+    └── index.php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;创建 docker-compose.yml&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;services&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;mysql&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;3306:3306&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;MYSQL_DATABASE&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;phpdata&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;MYSQL_USER&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;user&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;MYSQL_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dbdata:/var/lib/mysql&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;php&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./php&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8080:80'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./src:/var/www/html&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./apache:/etc/apache2/sites-enabled/&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;phpmyadmin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;phpmyadmin/phpmyadmin&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8081:80'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;links&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql:db&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;PMA_USER&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;root&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;PMA_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;adminsessions:/sessions&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;depends_on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mysql&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;php&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;dbdata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;adminsessions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;问题记录&quot;&gt;问题记录&lt;/h2&gt;
+
+&lt;h3 id=&quot;mysql-挂载-volume-后启动时显示无权限&quot;&gt;Mysql 挂载 volume 后启动时显示无权限&lt;/h3&gt;
+
+&lt;p&gt;设置mysql的启动模式 &lt;code class=&quot;highlighter-rouge&quot;&gt;privileged:true&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;另外这个问题一般不会发生，我之前遇到主要原因是我把多个 volume 都映射到了一个上面，导致目录内部读写发生冲突。&lt;/p&gt;</content><author><name>Su Yan</name></author><category term="工具" /><category term="Docker" /><summary type="html">Docker 基本概念</summary></entry><entry><title type="html">React 学习 - 开发环境搭建</title><link href="http://localhost:4000/2017/02/19/setup-react-environment.html" rel="alternate" type="text/html" title="React 学习 - 开发环境搭建" /><published>2017-02-19T00:00:00+08:00</published><updated>2017-02-19T00:00:00+08:00</updated><id>http://localhost:4000/2017/02/19/setup-react-environment</id><content type="html" xml:base="http://localhost:4000/2017/02/19/setup-react-environment.html">&lt;h2 id=&quot;1-安装-yarn&quot;&gt;1. 安装 Yarn&lt;/h2&gt;
+
+&lt;p&gt;包管理可以用 npm 或者 yarn，好多人推荐 yarn，我这里就用这个了&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew update
+brew install yarn
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2-初始化项目文件夹&quot;&gt;2. 初始化项目文件夹&lt;/h2&gt;
+
+&lt;p&gt;首先要做的是创建一个工程目录，然后在目录中执行 yarn 初始化即可&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-安装-webpack&quot;&gt;3. 安装 Webpack&lt;/h2&gt;
+
+&lt;p&gt;Webpack 可以让整个开发过程及其方便，这里只讲如何使用它来搭建 React 开发环境&lt;/p&gt;
+
+&lt;p&gt;安装webpack&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add webpack webpack-dev-server path
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;创建 webpack 配置文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch webpack.config.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;写入以下内容&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'path'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Html webpack plugin setting&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPlugin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'html-webpack-plugin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPluginConfig&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./client/index.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'index.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;inject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'body'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Open browser plugin setting&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenBrowserPlugin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'open-browser-webpack-plugin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./client/index.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dist'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'index_bundle.js'&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;loaders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;js$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'babel-loader'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/node_modules/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;jsx$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'babel-loader'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/node_modules/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;css$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'style-loader!css-loader'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/node_modules/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPluginConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OpenBrowserPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'http://localhost:8080'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这里需要说明一下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;entry: 整个项目的入口文件&lt;/li&gt;
+  &lt;li&gt;output: 编译好的文件输出位置&lt;/li&gt;
+  &lt;li&gt;loaders: 用来告诉loaders处理哪些文件&lt;/li&gt;
+  &lt;li&gt;plugins: 启用的webpack插件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;html-webpack-plugin&quot;&gt;html-webpack-plugin&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add html-webpack-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面我设置了 html 插件用来帮助把编译后的文件添加到body最后面，所以bundle.js这个js不需要我自己来添加到index.html中了&lt;/p&gt;
+
+&lt;h3 id=&quot;css-loader-和-style-loader&quot;&gt;css-loader 和 style-loader&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add css-loader style-loader
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然后在webpack.config.js中就可以使用 css-loader 和 style-loader 了&lt;/p&gt;
+
+&lt;p&gt;之后我们在需要使用css的时候，直接用以下方式即可&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import &quot;./App.css&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;另外在写 react 应用时，也可以直接使用内敛样式，例如&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;backgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'#EEE'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;world&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;open-browser-webpack-plugin&quot;&gt;open-browser-webpack-plugin&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add open-browser-webpack-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这个插件的作用是编译完成以后，打开浏览器&lt;/p&gt;
+
+&lt;h2 id=&quot;设置-babel&quot;&gt;设置 Babel&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add babel-loader babel-core babel-preset-es2015 babel-preset-react --dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;preset 是 babel 的插件，用来让 babel 帮忙转译。然后再创建一个 babel 配置文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch .babelrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;写入内容&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;presets&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;es2015&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;4-设置-react-环境&quot;&gt;4. 设置 React 环境&lt;/h2&gt;
+
+&lt;p&gt;安装 React&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add react react-dom
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;当前目录是这个样子&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── .babelrc
+├── node_modules
+├── package.json
+├── webpack.config.js
+└── yarn.lock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;接下来我们加入 React 需要的文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── client
+│   ├── components
+│   │   └── App.js
+│   ├── index.html
+│   └── index.js
+├── package.json
+├── webpack.config.js
+└── yarn.lock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在 index.html 中写入&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;React App Setup&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;root&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在 index.js 中写入&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react-dom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./components/App.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Router&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hashHistory&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react-router'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Router&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;history&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hashHistory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Route&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/about&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Router&amp;gt;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,
+&lt;/span&gt;  &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'root'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在 App.js 中写入&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;World&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&amp;gt;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;5-设置-react-router&quot;&gt;5. 设置 React-Router&lt;/h2&gt;
+
+&lt;p&gt;想要完成页面跳转以及一些复杂的多页面操作，可以使用 React-Router 来支持&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn add react-router
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用例子可以看上面index.js内容&lt;/p&gt;
+
+&lt;h2 id=&quot;6-启动-react&quot;&gt;6. 启动 React&lt;/h2&gt;
+
+&lt;p&gt;修改package.json，加入scripts&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack-dev-server&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack --progress --colors&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;build 方法会把网站打包一下，然后放到之前定义好的目录里面。start 可以直接开启开发模式，并且开启预览&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;7-start-kit&quot;&gt;7. start kit&lt;/h2&gt;
+
+&lt;p&gt;这些配置不需要每次都跑一次，我自己的放在 &lt;a href=&quot;https://github.com/suyan/react-start-kit&quot;&gt;Github&lt;/a&gt; 上。下载下来运行&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yarn install
+yarn start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;即可开启一个 Web App 的开发了&lt;/p&gt;
+
+&lt;h2 id=&quot;refer&quot;&gt;Refer&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel&quot;&gt;Setup a React Environment Using webpack and Babel&lt;/a&gt;&lt;/p&gt;</content><author><name>Su Yan</name></author><category term="技术" /><category term="React" /><summary type="html">1. 安装 Yarn</summary></entry><entry><title type="html">在 Mac 下用 Docker 安装测试 HHVM</title><link href="http://localhost:4000/2017/01/14/install-hhvm-on-mac-with-docker.html" rel="alternate" type="text/html" title="在 Mac 下用 Docker 安装测试 HHVM" /><published>2017-01-14T00:00:00+08:00</published><updated>2017-01-14T00:00:00+08:00</updated><id>http://localhost:4000/2017/01/14/install-hhvm-on-mac-with-docker</id><content type="html" xml:base="http://localhost:4000/2017/01/14/install-hhvm-on-mac-with-docker.html">&lt;p&gt;本来在 Mac 下用 Homebrew 安装 HHVM 应该是最容易的，但是最近有&lt;a href=&quot;https://github.com/hhvm/homebrew-hhvm/issues/68&quot;&gt;一个 bug&lt;/a&gt; 导致我在自己电脑上一直安装失败，所以我只好决定用 Docker 来装。&lt;/p&gt;
+
+&lt;h2 id=&quot;安装-docker&quot;&gt;安装 Docker&lt;/h2&gt;
+
+&lt;p&gt;现在在 Mac 下安装 Docker 非常方便，到 &lt;a href=&quot;https://docs.docker.com/docker-for-mac/&quot;&gt;官网&lt;/a&gt; 下载一个 dmg 包直接安装就好。&lt;/p&gt;
+
+&lt;h2 id=&quot;制作-hhvm-镜像&quot;&gt;制作 HHVM 镜像&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/hhvm/hhvm-docker&quot;&gt;HHVM&lt;/a&gt; 官方提供了 Docker image，但是我在直接启动启动时发现官方的 image 竟然没有启动 hh_client ，所以需要自己稍微修改一下。&lt;/p&gt;
+
+&lt;p&gt;另外在 build 过程中可能因为网络问题会失败… 因为你懂得的原因。所以直接把这个过程放在国外服务器上执行吧，速度快还不会出问题。&lt;/p&gt;
+
+&lt;h3 id=&quot;下载-dockerfile&quot;&gt;下载 Dockerfile&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/hhvm/hhvm-docker.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;官方给了 &lt;code class=&quot;highlighter-rouge&quot;&gt;hhvm-latest-proxygen&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;hhvm-latest&lt;/code&gt; 的 Dockerfile，这里我推荐前者，直接就可以映射一个代码目录，在浏览器测试 HHVM。后者的话需要登陆到 container 里面测试代码，不是非常方便。&lt;/p&gt;
+
+&lt;h3 id=&quot;修改-dockerfile&quot;&gt;修改 Dockerfile&lt;/h3&gt;
+
+&lt;p&gt;因为运行 HHVM 需要启动 typechecker，所以需要稍微修改一下 HHVM server 的启动命令。在刚刚下载好的目录 &lt;code class=&quot;highlighter-rouge&quot;&gt;hhvm-latest-proxygen&lt;/code&gt; 中代码的最后一行改为:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CMD &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/usr/bin/hhvm&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;-m&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;-c&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;/etc/hhvm/server.ini&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;-c&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;/etc/hhvm/site.ini&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;-d&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;hhvm.hack.lang.look_for_typechecker=0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;生成自己的-image&quot;&gt;生成自己的 image&lt;/h3&gt;
+
+&lt;p&gt;然后在 &lt;code class=&quot;highlighter-rouge&quot;&gt;hhvm-latest-proxygen&lt;/code&gt; 目录下执行下面命令即可：&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; yourname/hhvm-proxygen &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;上传到到自己仓库中&quot;&gt;上传到到自己仓库中&lt;/h2&gt;
+
+&lt;p&gt;我就直接上传到 &lt;a href=&quot;http://hub.docker.com&quot;&gt;Docker Hub&lt;/a&gt; 了。&lt;/p&gt;
+
+&lt;p&gt;先用 &lt;code class=&quot;highlighter-rouge&quot;&gt;docker login&lt;/code&gt; 登陆一下，然后执行下面命令就行了&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker push yourname/hhvm-proxygen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;启动-hhvm&quot;&gt;启动 HHVM&lt;/h2&gt;
+
+&lt;p&gt;启动的话我建议弄一个自己的工作目录，建立一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;index.php&lt;/code&gt; 文件，写入以下内容&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hh&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;phpinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然后在工作目录下执行以下命令就可以了。&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;hhvm &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;:/var/www/public &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 80:80 yourname/hhvm-proxygen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;我绑定了80端口，所以直接打开 &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost&lt;/code&gt; 就可以测试了。想看 log 的话可以执行&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs hhvm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Su Yan</name></author><category term="工具" /><category term="Mac" /><category term="Docker" /><summary type="html">本来在 Mac 下用 Homebrew 安装 HHVM 应该是最容易的，但是最近有一个 bug 导致我在自己电脑上一直安装失败，所以我只好决定用 Docker 来装。</summary></entry><entry><title type="html">在 Ubuntu 下部署 Shadowsocks</title><link href="http://localhost:4000/2016/12/31/deploy-shadowsocks-on-ubuntu.html" rel="alternate" type="text/html" title="在 Ubuntu 下部署 Shadowsocks" /><published>2016-12-31T00:00:00+08:00</published><updated>2016-12-31T00:00:00+08:00</updated><id>http://localhost:4000/2016/12/31/deploy-shadowsocks-on-ubuntu</id><content type="html" xml:base="http://localhost:4000/2016/12/31/deploy-shadowsocks-on-ubuntu.html">&lt;p&gt;回国以后先试了部署 L2TP VPN（&lt;a href=&quot;/2016/12/30/deploy-l2tp-on-ubuntu.html&quot;&gt;在 Ubuntu 下部署 L2TP VPN&lt;/a&gt;），结果发现 VPN 稳定性还是略差，经常掉线。其实对于一般的浏览网页需求，Shadowsocks 就足够了，所以就有了此文。&lt;/p&gt;
+
+&lt;h2 id=&quot;服务端&quot;&gt;服务端&lt;/h2&gt;
+
+&lt;p&gt;我的环境是 Linode Tokyo + Ubuntu 14.04&lt;/p&gt;
+
+&lt;p&gt;这里依然提供一个一键脚本，&lt;a href=&quot;https://teddysun.com/342.html&quot;&gt;Shadowsocks Python版一键安装脚本&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;想手动配置的往下看。&lt;/p&gt;
+
+&lt;h3 id=&quot;安装-shadowsocks&quot;&gt;安装 Shadowsocks&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get update
+apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;python-pip
+pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;shadowsocks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;配置-shadowsocks&quot;&gt;配置 Shadowsocks&lt;/h3&gt;
+
+&lt;p&gt;下面的password那儿自己修改一下&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;MYIP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/sbin/ifconfig &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;|grep inet|grep &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 127.0.0.1|grep &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; inet6|awk &lt;span class=&quot;s1&quot;&gt;'{print $2}'&lt;/span&gt;|tr &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;addr:&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/etc/shadowsocks.json&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+{
+    &quot;server&quot;:&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MYIP&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;&quot;,
+    &quot;server_port&quot;:8989,
+    &quot;local_address&quot;: &quot;127.0.0.1&quot;,
+    &quot;local_port&quot;:1080,
+    &quot;password&quot;:&quot;test&quot;,
+    &quot;timeout&quot;:300,
+    &quot;method&quot;:&quot;aes-256-cfb&quot;,
+    &quot;fast_open&quot;: false
+}
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;启动-shadowsocks&quot;&gt;启动 Shadowsocks&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssserver &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; /etc/shadowsocks.json &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;客户端&quot;&gt;客户端&lt;/h2&gt;
+
+&lt;p&gt;客户端的话可以直接去&lt;a href=&quot;https://shadowsocks.org/en/download/clients.html&quot;&gt;官网查看&lt;/a&gt;，我之前使用的是 &lt;a href=&quot;https://github.com/shadowsocks/ShadowsocksX-NG/releases&quot;&gt;ShadowsocksX-NG&lt;/a&gt;，但是我发现这里我自己设置了代理网站后总是不能立刻生效。&lt;/p&gt;
+
+&lt;p&gt;所以现在改到了&lt;a href=&quot;https://github.com/zhuhaow/SpechtLite&quot;&gt;SpechtLite&lt;/a&gt;，根据&lt;a href=&quot;http://www.jianshu.com/p/663a898aa01a&quot;&gt;这篇文章&lt;/a&gt;可以非常方便配置。iOS下的客户端的话，推荐 &lt;a href=&quot;https://itunes.apple.com/cn/app/wingy-proxy-for-http-s-socks5/id1178584911?mt=8&quot;&gt;Wingy&lt;/a&gt;，设置也非常简单。&lt;/p&gt;
+
+&lt;p&gt;这里提一下最近很火的 Surge，这个软件确实是神器一枚，使用起来非常方便。只是它暂时功能还有限，感觉并不值当前的价格，如果未来提供像 Charles 一样强大的功能的话，即使不用来科学上网，也是很值得入手的应用之一。不过据说还在开发中，所以之后可以考虑入手一枚。&lt;/p&gt;</content><author><name>Su Yan</name></author><category term="工具" /><category term="Tools" /><summary type="html">回国以后先试了部署 L2TP VPN（在 Ubuntu 下部署 L2TP VPN），结果发现 VPN 稳定性还是略差，经常掉线。其实对于一般的浏览网页需求，Shadowsocks 就足够了，所以就有了此文。</summary></entry><entry><title type="html">在 Ubuntu 下部署 L2TP VPN</title><link href="http://localhost:4000/2016/12/30/deploy-l2tp-on-ubuntu.html" rel="alternate" type="text/html" title="在 Ubuntu 下部署 L2TP VPN" /><published>2016-12-30T00:00:00+08:00</published><updated>2016-12-30T00:00:00+08:00</updated><id>http://localhost:4000/2016/12/30/deploy-l2tp-on-ubuntu</id><content type="html" xml:base="http://localhost:4000/2016/12/30/deploy-l2tp-on-ubuntu.html">&lt;p&gt;回国之后为了正常上网，还是得部署一个 VPN 自用。之前写过&lt;a href=&quot;/2013/12/11/deploy-pptp-vpn-in-ubuntu.html&quot;&gt;在ubuntu下搭建pptp vpn服务器&lt;/a&gt;，本来准备直接拿来用的，结果发现 MacOS Sierra 竟然不支持 PPTP 了 T_T 只好重新选择一个方式，这篇主要讲如何部署 L2TP VPN 在 Ubuntu 下，以及如何通过 Mac 连接上去。&lt;/p&gt;
+
+&lt;h2 id=&quot;服务端&quot;&gt;服务端&lt;/h2&gt;
+
+&lt;p&gt;我的环境是 Linode Tokyo + Ubuntu 14.04&lt;/p&gt;
+
+&lt;p&gt;如果不像自己配置，这里有一键脚本，非常方便。&lt;a href=&quot;https://github.com/philpl/setup-simple-ipsec-l2tp-vpn&quot;&gt;setup-simple-ipsec-l2tp-vpn&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://raw.github.com/philpl/setup-simple-ipsec-l2tp-vpn/master/setup.sh
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;sh setup.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果喜欢手动安装，可以往下看。我在root下执行的，所以没有加sudo，如果不是root用户记得加上。&lt;/p&gt;
+
+&lt;h3 id=&quot;安装必备软件&quot;&gt;安装必备软件&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get update
+apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;software-properties-common
+add-apt-repository ppa:openswan/ppa
+apt-get update
+apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;openswan xl2tpd ppp lsof
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;配置ip转发&quot;&gt;配置IP转发&lt;/h3&gt;
+
+&lt;h4 id=&quot;更新ip转发&quot;&gt;更新IP转发&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;net.ipv4.ip_forward = 1&quot;&lt;/span&gt; |  &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;net.ipv4.conf.all.accept_redirects = 0&quot;&lt;/span&gt; |  &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;net.ipv4.conf.all.send_redirects = 0&quot;&lt;/span&gt; |  &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;net.ipv4.conf.default.rp_filter = 0&quot;&lt;/span&gt; |  &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;net.ipv4.conf.default.accept_source_route = 0&quot;&lt;/span&gt; |  &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;net.ipv4.conf.default.send_redirects = 0&quot;&lt;/span&gt; |  &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/sysctl.conf
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;net.ipv4.icmp_ignore_bogus_error_responses = 1&quot;&lt;/span&gt; |  &lt;span class=&quot;nb&quot;&gt;tee&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; /etc/sysctl.conf
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;vpn &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /proc/sys/net/ipv4/conf/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$vpn&lt;/span&gt;/accept_redirects&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$vpn&lt;/span&gt;/send_redirects&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;设置ip-table&quot;&gt;设置IP table&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;MYIP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/sbin/ifconfig &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;|grep inet|grep &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 127.0.0.1|grep &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; inet6|awk &lt;span class=&quot;s1&quot;&gt;'{print $2}'&lt;/span&gt;|tr &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;addr:&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+iptables &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; nat &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt; POSTROUTING &lt;span class=&quot;nt&quot;&gt;-j&lt;/span&gt; SNAT &lt;span class=&quot;nt&quot;&gt;--to-source&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$MYIP&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; eth0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;配置ipsec&quot;&gt;配置IPSEC&lt;/h3&gt;
+
+&lt;h4 id=&quot;ipsec-基本设置&quot;&gt;IPSEC 基本设置&lt;/h4&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;MYIP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/sbin/ifconfig &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;|grep inet|grep &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 127.0.0.1|grep &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; inet6|awk &lt;span class=&quot;s1&quot;&gt;'{print $2}'&lt;/span&gt;|tr &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;addr:&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/etc/ipsec.conf&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+version 2 # conforms to second version of ipsec.conf specification
+
+config setup
+    dumpdir=/var/run/pluto/
+    #in what directory should things started by setup (notably the Pluto daemon) be allowed to dump core?
+
+    nat_traversal=yes
+    #whether to accept/offer to support NAT (NAPT, also known as &quot;IP Masqurade&quot;) workaround for IPsec
+
+    virtual_private=%v4:10.0.0.0/8,%v4:192.168.0.0/16,%v4:172.16.0.0/12,%v6:fd00::/8,%v6:fe80::/10
+    #contains the networks that are allowed as subnet= for the remote client. In other words, the address ranges that may live behind a NAT router through which a client connects.
+
+    protostack=netkey
+    #decide which protocol stack is going to be used.
+
+    force_keepalive=yes
+    keep_alive=60
+    # Send a keep-alive packet every 60 seconds.
+
+conn L2TP-PSK-noNAT
+    authby=secret
+    #shared secret. Use rsasig for certificates.
+
+    pfs=no
+    #Disable pfs
+
+    auto=add
+    #the ipsec tunnel should be started and routes created when the ipsec daemon itself starts.
+
+    keyingtries=3
+    #Only negotiate a conn. 3 times.
+
+    ikelifetime=8h
+    keylife=1h
+
+    ike=aes256-sha1,aes128-sha1,3des-sha1
+    phase2alg=aes256-sha1,aes128-sha1,3des-sha1
+    # https://lists.openswan.org/pipermail/users/2014-April/022947.html
+    # specifies the phase 1 encryption scheme, the hashing algorithm, and the diffie-hellman group. The modp1024 is for Diffie-Hellman 2. Why 'modp' instead of dh? DH2 is a 1028 bit encryption algorithm that modulo's a prime number, e.g. modp1028. See RFC 5114 for details or the wiki page on diffie hellmann, if interested.
+
+    type=transport
+    #because we use l2tp as tunnel protocol
+
+    left=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MYIP&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+    #fill in server IP above
+
+    leftprotoport=17/1701
+    right=%any
+    rightprotoport=17/%any
+
+    dpddelay=10
+    # Dead Peer Dectection (RFC 3706) keepalives delay
+    dpdtimeout=20
+    #  length of time (in seconds) we will idle without hearing either an R_U_THERE poll from our peer, or an R_U_THERE_ACK reply.
+    dpdaction=clear
+    # When a DPD enabled peer is declared dead, what action should be taken. clear means the eroute and SA with both be cleared.
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;ipsec密码&quot;&gt;IPSEC密码&lt;/h4&gt;
+
+&lt;p&gt;下面的 sharedpassword 可以改，但是得自己记住，因为之后连接的时候会用到。&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;MYIP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/sbin/ifconfig &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;|grep inet|grep &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; 127.0.0.1|grep &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; inet6|awk &lt;span class=&quot;s1&quot;&gt;'{print $2}'&lt;/span&gt;|tr &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;addr:&quot;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/etc/ipsec.secrets&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$MYIP&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt; %any: PSK &quot;sharedpassword&quot;
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+
+&lt;/span&gt;service ipsec restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;验证ipsec&quot;&gt;验证IPSEC&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ipsec verify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;结果应该如下&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Checking &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;IPsec got installed and started correctly:
+
+Version check and ipsec on-path                   	&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;OK]
+Openswan U2.6.42/K3.16.7-x86_64-linode49 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;netkey&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+See &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;ipsec &lt;span class=&quot;nt&quot;&gt;--copyright&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' for copyright information.
+Checking for IPsec support in kernel              	[OK]
+ NETKEY: Testing XFRM related proc values
+         ICMP default/send_redirects              	[OK]
+         ICMP default/accept_redirects            	[OK]
+         XFRM larval drop                         	[OK]
+Hardware random device check                      	[N/A]
+Two or more interfaces found, checking IP forwarding	[OK]
+Checking rp_filter                                	[ENABLED]
+ /proc/sys/net/ipv4/conf/all/rp_filter            	[ENABLED]
+Checking that pluto is running                    	[OK]
+ Pluto listening for IKE on udp 500               	[OK]
+ Pluto listening for IKE on tcp 500               	[NOT IMPLEMENTED]
+ Pluto listening for IKE/NAT-T on udp 4500        	[OK]
+ Pluto listening for IKE/NAT-T on tcp 4500        	[NOT IMPLEMENTED]
+ Pluto listening for IKE on tcp 10000 (cisco)     	[NOT IMPLEMENTED]
+Checking NAT and MASQUERADEing                    	[TEST INCOMPLETE]
+Checking '&lt;/span&gt;ip&lt;span class=&quot;s1&quot;&gt;' command                             	[OK]
+Checking '&lt;/span&gt;iptables&lt;span class=&quot;s1&quot;&gt;' command                       	[OK]
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;配置xl2tpd&quot;&gt;配置xl2tpd&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/etc/xl2tpd/xl2tpd.conf&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+[global]
+ipsec saref = yes
+saref refinfo = 30
+
+;debug avp = yes
+;debug network = yes
+;debug state = yes
+;debug tunnel = yes
+
+[lns default]
+ip range = 172.16.1.30-172.16.1.100
+local ip = 172.16.1.1
+refuse pap = yes
+require authentication = yes
+;ppp debug = yes
+pppoptfile = /etc/ppp/options.xl2tpd
+length bit = yes
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;配置ppp&quot;&gt;配置PPP&lt;/h3&gt;
+
+&lt;h4 id=&quot;基本设置&quot;&gt;基本设置&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/etc/ppp/options.xl2tpd&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+require-mschap-v2
+ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+auth
+mtu 1000
+mru 1000
+crtscts
+hide-password
+modem
+name l2tpd
+proxyarp
+lcp-echo-interval 0
+lcp-echo-failure 0
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;添加用户&quot;&gt;添加用户&lt;/h4&gt;
+
+&lt;p&gt;记得更改账户名和密码 client 和 secret，用来连接vpn的时候使用&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;/etc/ppp/chap-secrets&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+# Secrets for authentication using CHAP
+# client       server  secret       IP addresses
+test          l2tpd   test            *
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;重启服务&quot;&gt;重启服务&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;service ipsec restart
+/etc/init.d/xl2tpd restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;客户端&quot;&gt;客户端&lt;/h2&gt;
+
+&lt;h3 id=&quot;mac&quot;&gt;Mac&lt;/h3&gt;
+
+&lt;p&gt;打开 系统设置 -&amp;gt; 网络 点击左下角➕然后选择 VPN，Type选择 L2TP over IPSec。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Server Address: 服务器ip&lt;/li&gt;
+  &lt;li&gt;Account name: 前面设置的client名&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;点开认证设定&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Password: 之前设置的secret&lt;/li&gt;
+  &lt;li&gt;Shared Secret: 之前设置的sharedpassword&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;别忘了在高级那里选择，所有流量都通过此网络转发。&lt;/p&gt;
+
+&lt;h2 id=&quot;参考&quot;&gt;参考&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tacy.github.io/blog/2014/12/24/L2tp-ipsec-in-linode/&quot;&gt;l2tp ipsec in linode&lt;/a&gt;&lt;/p&gt;</content><author><name>Su Yan</name></author><category term="工具" /><category term="Tools" /><summary type="html">回国之后为了正常上网，还是得部署一个 VPN 自用。之前写过在ubuntu下搭建pptp vpn服务器，本来准备直接拿来用的，结果发现 MacOS Sierra 竟然不支持 PPTP 了 T_T 只好重新选择一个方式，这篇主要讲如何部署 L2TP VPN 在 Ubuntu 下，以及如何通过 Mac 连接上去。</summary></entry><entry><title type="html">我使用的收藏，写作和分享工具</title><link href="http://localhost:4000/2016/11/09/my-writing-tools.html" rel="alternate" type="text/html" title="我使用的收藏，写作和分享工具" /><published>2016-11-09T00:00:00+08:00</published><updated>2016-11-09T00:00:00+08:00</updated><id>http://localhost:4000/2016/11/09/my-writing-tools</id><content type="html" xml:base="http://localhost:4000/2016/11/09/my-writing-tools.html">&lt;blockquote&gt;
+  &lt;p&gt;我日常非工作时间外的学习，基本流程就是收藏，写作和分享，所以我把这三个集合写在一篇文章里面。同时记录下来这个过程，可以让我清晰的知道，我应该在做哪件事情的时候，用哪个工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;收藏工具&quot;&gt;收藏工具&lt;/h2&gt;
+
+&lt;p&gt;这个部分准确的说应该是收藏和阅读，因为只收藏不阅读是没有任何意义的。&lt;/p&gt;
+
+&lt;h3 id=&quot;网站的收藏&quot;&gt;网站的收藏&lt;/h3&gt;
+
+&lt;p&gt;网站的收藏我只使用Safari自带的收藏夹，因为它已经完全满足我的要求：添加方便，全设备同步以及检索方便（使用Alfred直接打开）。这里可以看一下我的截图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-safari-favorite-list.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;我主力浏览器是Safari，因为在大屏下，侧边栏的存在可以很方便的打开常用网站。另外通过Alfred打开已经保存的网站也非常迅速，如下图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-open-website-with-alfred.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;文章及微博等收藏&quot;&gt;文章及微博等收藏&lt;/h3&gt;
+
+&lt;p&gt;其他的所有收藏，我都用Instapaper来做，这个软件被Pinterest收购以后Pro功能都免费发布了，简直是良心中的良心。Pro的必备功能包括全文搜索，文章片段高亮以及笔记功能，都可以让阅读和笔记体验提升不少。&lt;/p&gt;
+
+&lt;p&gt;我文章的阅读来源主要是Reeder，然后是微信公众号，知乎，微博和即刻等。因为来源太广，使用这些来源自带的收藏功能经常让我忘了去哪儿找我要的东西。所以我会把它们全部集合到Instapaper中来。&lt;/p&gt;
+
+&lt;p&gt;这里附一张我Reeder的截图:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-reeder-list.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;写作工具&quot;&gt;写作工具&lt;/h2&gt;
+
+&lt;h3 id=&quot;博客写作&quot;&gt;博客写作&lt;/h3&gt;
+
+&lt;p&gt;写公开博客的时候，我对工具只有以下几个要求&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;支持原生Markdown&lt;/li&gt;
+  &lt;li&gt;支持显示文章TOC&lt;/li&gt;
+  &lt;li&gt;支持文件管理&lt;/li&gt;
+  &lt;li&gt;可以灵活导出到其他格式&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;尝试过Ulyssess，Quiver，Day One等工具之后，我选择了&lt;strong&gt;MWweb&lt;/strong&gt;。MWeb的使用体验非常棒，这里是我写这篇文章时的截图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-mweb-writing-screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可以看出几乎满足了我的所有要求，左边我导入了我存放博文的github本地目录，然后直接可以添加文件和书写，创建文件的时候还自动帮我以当前日期命名。我现在博客的格式几乎与此如出一辙，也是我最喜欢的管理和阅读布局。右边栏有我当前文章的目录，可以在不同的子标题间方便地跳转。&lt;/p&gt;
+
+&lt;p&gt;对于导出部分来说，MWeb也做的面面俱到，大部分我使用的格式都包含了进去。值得一提的是MWeb对于Evernote的支持非常好，格式速度管理都很不错，大家可以试试。&lt;/p&gt;
+
+&lt;p&gt;P.S. 我博客里的图片都是通过之前的&lt;a href=&quot;/2015/01/10/use-dropzone-and-qiniu-to-store-blog-images.html&quot;&gt;一个工具&lt;/a&gt;上传到七牛，然后直接粘贴到这里的。&lt;/p&gt;
+
+&lt;h3 id=&quot;知识总结&quot;&gt;知识总结&lt;/h3&gt;
+
+&lt;p&gt;对于总结性的笔记，整理和检索的需求比书写方便更为重要，因为总结的目的本来就是为了以后用到的时候方便立刻找到。从这方面来说，至今没有发现一个软件可以比得上Evernote。这里是我的笔记一览：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-evernote-list.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这张图暴露了我是一个CS找工作狗 0_0 刷题真是没有办法的事情啊，北美面试全是算法题… 然后下图是我如何使用标签搜索笔记:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-evernote-tag-list.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Evernote在检索上也是做到最好的了，其中还包括了PDF和图片的搜索，都是瞬间完成。下图是Evernote自带搜索框，Alfred的我就不贴了，也支持标题搜索和内容搜索。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-evernote-search-way.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Evernote的使用，我仅限于上述提到的，最多再有一个多平台同步。对于它推崇的剪藏及其他快速笔记的功能我一概不用，因为我得确保自己知识库里面的东西，都是认真整理过的。&lt;/p&gt;
+
+&lt;h3 id=&quot;片段笔记&quot;&gt;片段笔记&lt;/h3&gt;
+
+&lt;p&gt;有时候也经常需要片段的笔记，比如一个人给你发了一个地址，或者你脑海里突然有一个念头。如果我在使用Mac，那么Unclutter已经足够好用了，鼠标移动到顶栏，下滑，笔记即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-unclutter-screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果是在手机上需要记录或者一些稍微重要点的事情或者日记，那么Day One是我的不二选择。这个软件自动帮你标记好所有你记录片段时的状态，包含日期，GPS，当天天气（虽然可能不需要 -_-）。另外在Mac下顶栏的快捷访问方式也非常方便（这里不附图了，因为敏感信息太多）。&lt;/p&gt;
+
+&lt;h2 id=&quot;分享工具&quot;&gt;分享工具&lt;/h2&gt;
+
+&lt;h3 id=&quot;博客发布&quot;&gt;博客发布&lt;/h3&gt;
+
+&lt;p&gt;博客我使用Github + Jekyll来生成，所以没有什么步骤，只要写好文章以后去命令行push一下就好。本来这个过程也可以通过一些工具来简化的，但是我觉得提交过程还是检查一下的好。&lt;/p&gt;
+
+&lt;h3 id=&quot;微博twitter分享&quot;&gt;微博/Twitter分享&lt;/h3&gt;
+
+&lt;p&gt;Mac下的各个软件已经把分享功能做的比较简单了，这里我分享一下Mac侧边栏的快速分享。这里可以简单快速的写一些东西发布到各个社交网站，把Social组件加进来即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-notification-share.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果涉及到图片的分享，也可以使用Dropzone的扩展来做，直接拖图片到相应扩展即可。目前只有Twitter分享的扩展，如果有时间我可以写一个Weibo的。&lt;/p&gt;</content><author><name>Su Yan</name></author><category term="工具" /><category term="Tools" /><summary type="html">我日常非工作时间外的学习，基本流程就是收藏，写作和分享，所以我把这三个集合写在一篇文章里面。同时记录下来这个过程，可以让我清晰的知道，我应该在做哪件事情的时候，用哪个工具。</summary></entry><entry><title type="html">美国信用卡懒人选择</title><link href="http://localhost:4000/2016/11/07/credit-cards-in-usa.html" rel="alternate" type="text/html" title="美国信用卡懒人选择" /><published>2016-11-07T00:00:00+08:00</published><updated>2016-11-07T00:00:00+08:00</updated><id>http://localhost:4000/2016/11/07/credit-cards-in-usa</id><content type="html" xml:base="http://localhost:4000/2016/11/07/credit-cards-in-usa.html">&lt;h2 id=&quot;美国信用卡简介&quot;&gt;美国信用卡简介&lt;/h2&gt;
+
+&lt;p&gt;在美国信用卡在日常生活中非常重要，不光是好处多，而且有些地方非信用卡不可，我列举一下我知道的部分：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;从租车公司租车必须使用信用卡&lt;/li&gt;
+  &lt;li&gt;用信用卡付账可以返现或者积分&lt;/li&gt;
+  &lt;li&gt;拥有信用卡可以提升个人的信用分数&lt;/li&gt;
+  &lt;li&gt;临时大额消费可以分期偿还&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;但是信用卡类型非常多，几乎每家银行都提供了非常多的信用卡类型，选哪个作为日常使用的呢？以下我只介绍我自己的开的卡和选择原因。&lt;/p&gt;
+
+&lt;h2 id=&quot;不需要ssn卡&quot;&gt;不需要SSN卡&lt;/h2&gt;
+
+&lt;h3 id=&quot;citibank&quot;&gt;Citibank&lt;/h3&gt;
+
+&lt;h4 id=&quot;citi-thankyou-preferred-for-college-students&quot;&gt;Citi ThankYou Preferred for College Students&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-citi-thankyou-card.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://goo.gl/oATrVo&quot;&gt;申请地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;这个卡是我来美国第一个申请的卡，非常适合新来的国际学生，因为这个卡的申请不需要任何信用分数，也没有任何年龄限制。当时我有BOA和Citi两个选择，但是前者在年龄超一定值的时候需要在银行存一定的押金 T_T 大龄青年表示很受伤，所以立马放弃申请BOA。&lt;/p&gt;
+
+&lt;p&gt;这个卡我的开卡额度是1000刀，每半年可以申请提升一次。它的积分兑换大概是略小于1%，但是对于刚开始来说够用，然后我使用积分的方式是在Amazon上买东西。&lt;/p&gt;
+
+&lt;h2 id=&quot;需要ssn卡&quot;&gt;需要SSN卡&lt;/h2&gt;
+
+&lt;h3 id=&quot;discover&quot;&gt;Discover&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-discover-it.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://goo.gl/QELR4c&quot;&gt;申请地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;返现: 季度分类5%，其他1%&lt;/li&gt;
+  &lt;li&gt;开卡奖励: 开卡三月内消费一次得$50（需要refer）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个卡基本是有了SSN以后人人必备，因为每个季度都有一定的5%返现，现在申请其实返现力度有10%，因为它会记录你第一年的返现的钱，在一年后把这些返现再给你一次。这个卡搭配下面介绍的一个卡，可以一年返现非常多。&lt;/p&gt;
+
+&lt;p&gt;申请学生版本(用学校邮箱)可以每年拿好学生奖励 :D 大概是25刀，另外refer开卡有50刀的奖励。&lt;/p&gt;
+
+&lt;h3 id=&quot;chase&quot;&gt;Chase&lt;/h3&gt;
+
+&lt;p&gt;Chase是我选择的一个主要银行，因为大银行嘛，各方面做的都比较到位。还有就是我比较懒，不想管理太多卡，而Chase的信用卡囊括了很多高返现方面。&lt;/p&gt;
+
+&lt;p&gt;在介绍信用卡之前，先说一下Debit Card的开卡奖励，这个在开卡的时候需要SSN号和工作单位（实习也行），然后需要一个coupon，可以找人要或者eBay搞一个～&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Saving Account: 存$15000放3个月可得$200&lt;/li&gt;
+  &lt;li&gt;Checking Account: 有公司给你发工资到卡上可得$300&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;ultimate-rewardsur&quot;&gt;Ultimate Rewards(UR)&lt;/h4&gt;
+
+&lt;p&gt;UR是Chaes的积分系统。以下所有信用卡的返现，都以积分方式体现在这个系统里面。积分可以以100:1的方式兑换现金，也可以通过CSP(下面介绍的一个信用卡)花在别的地方，提高积分的价值。如果通过使用积分去买机票，租车和住酒店，可以达到100:2或100:3。&lt;/p&gt;
+
+&lt;p&gt;具体的使用方式可以读一下&lt;a href=&quot;(https://goo.gl/j5iJif)&quot;&gt;美国信用卡指南&lt;/a&gt;的文章，非常详细清晰。&lt;/p&gt;
+
+&lt;h4 id=&quot;chase-freedom&quot;&gt;Chase Freedom&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-chase-freedom.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://goo.gl/m8ovRp&quot;&gt;申请地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;返现: 季度分类5%，其他1%&lt;/li&gt;
+  &lt;li&gt;开卡奖励: 开卡三个月消费满500给$150&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Chase Freedom 也是必选之一，因为也是一个5%季度返现卡，配合Discover使用。开卡奖励应该有15000 UR，直接转换现金是$150。现在这个卡正在支持Costco购物5%的返现，所以基本上每个季度都可以把积分赚满（每个季度5%的上限是前1500）。&lt;/p&gt;
+
+&lt;h4 id=&quot;chase-freedom-unlimited&quot;&gt;Chase Freedom Unlimited&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-cfu.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://goo.gl/KmlL8s&quot;&gt;申请地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;返现: 所有1.5%，无上限&lt;/li&gt;
+  &lt;li&gt;开卡奖励: 开卡三个月消费满500给$150&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个是今年新开的一个卡，这个卡真正算得上懒人用，即所有的消费都是1.5%的返现，而且返现没有上限。我用这个卡付其他一切消费 :D&lt;/p&gt;
+
+&lt;h4 id=&quot;chase-sapphire-preferred-csp&quot;&gt;Chase Sapphire Preferred (CSP)&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-csp-card.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://goo.gl/c0cOIk&quot;&gt;申请地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;返现: 吃饭和旅行2%，其他1%&lt;/li&gt;
+  &lt;li&gt;开卡奖励: 开卡三个月消费4000给$550&lt;/li&gt;
+  &lt;li&gt;年费: $95，第一年免年费&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个卡用来帮助把之前攒的点数加倍，即用这个卡来买机票和住特定酒店，可以把积分成倍。另外如果租车的话，这个卡还可以提供Primary租车保险。&lt;/p&gt;
+
+&lt;h2 id=&quot;我的使用&quot;&gt;我的使用&lt;/h2&gt;
+
+&lt;p&gt;基本我持有以上的卡以后就不再折腾了，Citibank我已经不再使用，其他几个卡的用途如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;有季度5%返现的时候，用discover和Chase Freedom&lt;/li&gt;
+  &lt;li&gt;吃饭和旅游相关（Uber, Zipcar等都算），用CSP&lt;/li&gt;
+  &lt;li&gt;其他情况使用Chase Freedom Unlimited&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;需要refer留邮箱即可&quot;&gt;需要Refer留邮箱即可&lt;/h2&gt;
+
+&lt;p&gt;除了Citibank之外，我都可以Refer，如果需要的话可以直接留邮箱。&lt;/p&gt;</content><author><name>Su Yan</name></author><category term="生活" /><category term="essay" /><summary type="html">美国信用卡简介</summary></entry><entry><title type="html">Olympic National Park 自驾游</title><link href="http://localhost:4000/2016/07/02/olympic-national-park-travel.html" rel="alternate" type="text/html" title="Olympic National Park 自驾游" /><published>2016-07-02T00:00:00+08:00</published><updated>2016-07-02T00:00:00+08:00</updated><id>http://localhost:4000/2016/07/02/olympic-national-park-travel</id><content type="html" xml:base="http://localhost:4000/2016/07/02/olympic-national-park-travel.html">&lt;blockquote&gt;
+  &lt;p&gt;Olympic National Park 是美国10大国家公园之一，体验过以后真的感觉，要雪山有雪山，要湖水有湖水，要雨林有雨林，几乎囊括了大部分客观上的户外景观。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe src=&quot;https://www.google.com/maps/d/u/0/embed?mid=1K4IccR4RPigSMmKdjA2LLlJ5JYA&quot; width=&quot;100%&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;nourish-sequim&quot;&gt;Nourish Sequim&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-nourish-sequim.png&quot; alt=&quot;Nourish Sequim&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hurricane-ridge&quot;&gt;Hurricane Ridge&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-hurricane-ridge.png&quot; alt=&quot;Hurricane Ridge&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-hurricane-ridge-2.png&quot; alt=&quot;Hurricane Ridge&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-hurricane-ridge-3.png&quot; alt=&quot;Hurricane Ridge&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;la-push-beach&quot;&gt;La Push Beach&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-la-push.png&quot; alt=&quot;La Push&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sol-duc-falls&quot;&gt;Sol Duc Falls&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-sol-duc-falls.png&quot; alt=&quot;Sol Duc Falls&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;deer-lake&quot;&gt;Deer Lake&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-deer-lake.png&quot; alt=&quot;Deer Lake&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hoh-rain-forest&quot;&gt;Hoh Rain Forest&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-hoh-rain-forest.png&quot; alt=&quot;Hoh Rain Forest&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ruby-beach&quot;&gt;Ruby Beach&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-ruby-beach.png&quot; alt=&quot;Ruby Beach&quot; /&gt;&lt;/p&gt;</content><author><name>Su Yan</name></author><category term="生活" /><category term="essay" /><summary type="html">Olympic National Park 是美国10大国家公园之一，体验过以后真的感觉，要雪山有雪山，要湖水有湖水，要雨林有雨林，几乎囊括了大部分客观上的户外景观。</summary></entry><entry><title type="html">San Diego 自驾游</title><link href="http://localhost:4000/2016/03/13/san-diego-travel.html" rel="alternate" type="text/html" title="San Diego 自驾游" /><published>2016-03-13T00:00:00+08:00</published><updated>2016-03-13T00:00:00+08:00</updated><id>http://localhost:4000/2016/03/13/san-diego-travel</id><content type="html" xml:base="http://localhost:4000/2016/03/13/san-diego-travel.html">&lt;blockquote&gt;
+  &lt;p&gt;San Diego 就在 Los Angeles 车程不到2小时的地方，本来是来 LA 以后首选的旅行城市，拖到现在才去。总的说来，这个城市不大，每个地方都很容易到达，特别适合生活。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;iframe src=&quot;https://www.google.com/maps/d/u/0/embed?mid=1i4ygqIUA64JFqT8JCkdKUciF4go&quot; width=&quot;100%&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;carlsbad-flower-fields&quot;&gt;Carlsbad Flower Fields&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-carlsbad-flower-fields.png&quot; alt=&quot;Carlsbad Flower Fields&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;university-of-california-san-diego&quot;&gt;University of California San Diego&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-university-of-san-diego.png&quot; alt=&quot;University of San Diego&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;san-diego-temple&quot;&gt;San Diego Temple&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-san-diego-temple.png&quot; alt=&quot;San Diego Temple&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;la-jolla-cove&quot;&gt;La Jolla Cove&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-la-jolla-cove.png&quot; alt=&quot;La Jolla Cove&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;seaworld&quot;&gt;SeaWorld&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-seaworld-san-diego.png&quot; alt=&quot;SeaWorld&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;uss-midway-museum&quot;&gt;USS Midway Museum&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-uss-midway-museum.png&quot; alt=&quot;USS Midway Museum&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-cute-girl.png&quot; alt=&quot;Cute girl&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sunset-cliffs-park&quot;&gt;Sunset Cliffs Park&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-sunset-cliffs-park.png&quot; alt=&quot;Sunset Cliffs Park&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;old-town&quot;&gt;Old Town&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-old-town.png&quot; alt=&quot;Old Town&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;potato-chip-rock&quot;&gt;Potato Chip Rock&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/life-potato-chip-rock.png&quot; alt=&quot;Potato Chip Rock&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;美食严重推荐&quot;&gt;美食严重推荐&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Great Plaza Buffet&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Su Yan</name></author><category term="生活" /><category term="essay" /><summary type="html">San Diego 就在 Los Angeles 车程不到2小时的地方，本来是来 LA 以后首选的旅行城市，拖到现在才去。总的说来，这个城市不大，每个地方都很容易到达，特别适合生活。</summary></entry></feed>
