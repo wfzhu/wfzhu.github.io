@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Jun 2018 16:04:33 +0800</pubDate>
-    <lastBuildDate>Fri, 29 Jun 2018 16:04:33 +0800</lastBuildDate>
+    <pubDate>Fri, 29 Jun 2018 16:12:28 +0800</pubDate>
+    <lastBuildDate>Fri, 29 Jun 2018 16:12:28 +0800</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
     
       <item>
@@ -15,6 +15,7 @@
         <description>&lt;h2 id=&quot;java成神之路技术栈&quot;&gt;Java成神之路——技术栈&lt;/h2&gt;
 &lt;p&gt;这个是我在一篇博客上看到的文章，觉得写的挺全的，我也应该往这个方向充实自己，粘下来和大家共勉。&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/img/xiaofeng-head.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3 id=&quot;一基础篇&quot;&gt;一、基础篇&lt;/h3&gt;
 &lt;h4 id=&quot;11-jvm&quot;&gt;1.1 JVM&lt;/h4&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.1.1. Java内存模型，Java内存管理，Java堆和栈，垃圾回收
@@ -326,7 +327,7 @@ Centos
 使用linux，熟悉shell脚本
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;33-数据存储知识&quot;&gt;3.3. 数据存储知识&lt;/h3&gt;
+&lt;h4 id=&quot;33-数据存储知识&quot;&gt;3.3. 数据存储知识&lt;/h4&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3.3.1. 关系型数据库
 MySQL
 如何看执行计划
