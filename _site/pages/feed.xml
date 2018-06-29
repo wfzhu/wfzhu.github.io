@@ -6,15 +6,532 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Jun 2018 14:35:25 +0800</pubDate>
-    <lastBuildDate>Fri, 29 Jun 2018 14:35:25 +0800</lastBuildDate>
+    <pubDate>Fri, 29 Jun 2018 16:01:02 +0800</pubDate>
+    <lastBuildDate>Fri, 29 Jun 2018 16:01:02 +0800</lastBuildDate>
     <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>Java成神之路——技术栈</title>
+        <description>&lt;h2 id=&quot;java成神之路技术栈&quot;&gt;Java成神之路——技术栈&lt;/h2&gt;
+&lt;p&gt;这个是我在一篇博客上看到的文章，觉得写的挺全的，我也应该往这个方向充实自己，粘下来和大家共勉。&lt;/p&gt;
+
+&lt;h3 id=&quot;一基础篇&quot;&gt;一、基础篇&lt;/h3&gt;
+&lt;h4 id=&quot;11-jvm&quot;&gt;1.1 JVM&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.1.1. Java内存模型，Java内存管理，Java堆和栈，垃圾回收
+1.1.2. 了解JVM各种参数及调优
+1.1.3. 学习使用Java工具
+    jps, jstack, jmap, jconsole, jinfo, jhat, javap, …
+        http://kenai.com/projects/btrace 
+        http://www.crashub.org/ 
+        https://github.com/taobao/TProfiler 
+        https://github.com/CSUG/HouseMD 
+        http://wiki.cyclopsgroup.org/jmxterm 
+        https://github.com/jlusdy/TBJMap
+1.1.4. 学习Java诊断工具
+    http://www.eclipse.org/mat/ 
+    http://visualvm.java.net/oqlhelp.html
+1.1.5. 自己编写各种outofmemory，stackoverflow程序
+    HeapOutOfMemory
+    Young OutOfMemory
+    MethodArea OutOfMemory
+    ConstantPool OutOfMemory
+    DirectMemory OutOfMemory
+    Stack OutOfMemory
+    Stack OverFlow
+1.1.6. 使用工具尝试解决以下问题，并写下总结
+    当一个Java程序响应很慢时如何查找问题
+    当一个Java程序频繁FullGC时如何解决问题，如何查看垃圾回收日志
+    当一个Java应用发生OutOfMemory时该如何解决，年轻代、年老代、永久代解决办法不同，导致原因也不同
+1.1.7. 参考资料
+    http://docs.oracle.com/javase/specs/jvms/se7/html/ 
+    http://www.cs.umd.edu/~pugh/java/memoryModel/ 
+    http://gee.cs.oswego.edu/dl/jmm/cookbook.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;12-java基础知识&quot;&gt;1.2. Java基础知识&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-$xslt&quot;&gt;1.2.1. 阅读源代码
+    java.lang.String
+    java.lang.Integer
+    java.lang.Long
+    java.lang.Enum
+    java.math.BigDecimal
+    java.lang.ThreadLocal
+    java.lang.ClassLoader &amp;amp; java.net.URLClassLoader
+    java.util.ArrayList &amp;amp; java.util.LinkedList
+    java.util.HashMap &amp;amp; java.util.LinkedHashMap &amp;amp; java.util.TreeMap
+    java.util.HashSet &amp;amp; java.util.LinkedHashSet &amp;amp; java.util.TreeSet
+1.2.2. 熟悉Java中各种变量类型
+1.2.3. 熟悉Java String的使用，熟悉String的各种函数
+1.2.4. 熟悉Java中各种关键字
+1.2.5. 学会使用List，Map，Stack，Queue，Set
+    上述数据结构的遍历
+    上述数据结构的使用场景
+    Java实现对Array/List排序
+    java.uti.Arrays.sort()
+    java.util.Collections.sort()
+    Java实现对List去重
+    Java实现对List去重，并且需要保留数据原始的出现顺序
+    Java实现最近最少使用cache，用LinkedHashMap
+1.2.6. Java IO&amp;amp;Java NIO，并学会使用
+    java.io.*
+    java.nio.*
+    nio和reactor设计模式
+    文件编码，字符集
+1.2.7. Java反射与javassist
+    反射与工厂模式
+    java.lang.reflect.*
+1.2.8. Java序列化
+    java.io. Serializable
+    什么是序列化，为什么序列化
+    序列化与单例模式
+    google序列化protobuf
+1.2.9. 虚引用，弱引用，软引用
+    java.lang.ref.*
+    实验这些引用的回收
+1.2.10. 熟悉Java系统属性
+    java.util.Properties
+1.2.11. 熟悉Annotation用法
+    java.lang.annotation.*
+1.2.12. JMS
+    javax.jms.*
+1.2.13. JMX
+    java.lang.management.*
+    javax.management.*
+1.2.14. 泛型和继承，泛型和擦除
+1.2.15. 自动拆箱装箱与字节码
+1.2.16. 实现Callback
+1.2.17. java.lang.Void类使用
+1.2.18. Java Agent，premain函数
+    java.lang.instrument
+1.2.19. 单元测试
+    Junit， http://junit.org/ 
+    Jmockit， https://code.google.com/p/jmockit/ 
+    djUnit， http://works.dgic.co.jp/djunit/
+1.2.20. Java实现通过正则表达式提取一段文本中的电子邮件，并将@替换为#输出
+    java.lang.util.regex.*
+1.2.21. 学习使用常用的Java工具库
+    commons.lang, commons.*…
+    guava-libraries
+    netty
+1.2.22. 什么是API&amp;amp;SPI
+    http://en.wikipedia.org/wiki/Application_programming_interface 
+    http://en.wikipedia.org/wiki/Service_provider_interface
+1.2.23. 参考资料
+    JDK src.zip 源代码
+    http://openjdk.java.net/ 
+    http://commons.apache.org/ 
+    https://code.google.com/p/guava-libraries/ 
+    http://netty.io/ 
+    http://stackoverflow.com/questions/2954372/difference-between-spi-and-api 
+    http://stackoverflow.com/questions/11404230/how-to-implement-the-api-spi-pattern-in-java
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;13-java并发编程&quot;&gt;1.3. Java并发编程&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-$xslt&quot;&gt;1.3.1. 阅读源代码，并学会使用
+    java.lang.Thread
+    java.lang.Runnable
+    java.util.concurrent.Callable
+    java.util.concurrent.locks.ReentrantLock
+    java.util.concurrent.locks.ReentrantReadWriteLock
+    java.util.concurrent.atomic.Atomic*
+    java.util.concurrent.Semaphore
+    java.util.concurrent.CountDownLatch
+    java.util.concurrent.CyclicBarrier
+    java.util.concurrent.ConcurrentHashMap
+    java.util.concurrent.Executors
+1.3.2. 学习使用线程池，自己设计线程池需要注意什么
+1.3.3. 锁
+    什么是锁，锁的种类有哪些，每种锁有什么特点，适用场景是什么
+    在并发编程中锁的意义是什么
+1.3.4. synchronized的作用是什么，synchronized和lock
+1.3.5. sleep和wait
+1.3.6. wait和notify
+1.3.7. 写一个死锁的程序
+1.3.8. 什么是守护线程，守护线程和非守护线程的区别以及用法
+1.3.9. volatile关键字的理解
+    C++ volatile关键字和Java volatile关键字
+    happens-before语义
+    编译器指令重排和CPU指令重排
+    http://en.wikipedia.org/wiki/Memory_ordering 
+    http://en.wikipedia.org/wiki/Volatile_variable 
+    http://preshing.com/20130702/the-happens-before-relation/
+    1.3.10. 以下代码是不是线程安全？为什么？如果为count加上volatile修饰是否能够做到线程安全？你觉得该怎么做是线程安全的？
+    public class Sample{
+      private static int count =0;
+      public static void increment(){
+        count++;
+      }
+    }
+1.3.11. 解释一下下面两段代码的差别
+// 代码1
+public class Sample {
+  private static int count = 0;
+  synchronized public static void increment() {
+    count++;
+  }
+}
+// 代码2
+public class Sample {
+  private static AtomicInteger count = new AtomicInteger(0);
+  public static void increment() {
+    count.getAndIncrement();
+  }
+}
+1.3.12. 参考资料
+    http://book.douban.com/subject/10484692/ 
+    http://www.intel.com/content/www/us/en/processors/architectures-software-developer-manuals.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;二-进阶篇&quot;&gt;二、 进阶篇&lt;/h3&gt;
+&lt;h4 id=&quot;21-java底层知识&quot;&gt;2.1. Java底层知识&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2.1.1. 学习了解字节码、class文件格式
+    http://en.wikipedia.org/wiki/Java_class_file 
+    http://en.wikipedia.org/wiki/Java_bytecode 
+    http://en.wikipedia.org/wiki/Java_bytecode_instruction_listings 
+    http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/ 
+    http://asm.ow2.org/
+2.1.2. 写一个程序要求实现javap的功能（手工完成，不借助ASM等工具）
+如Java源代码：
+public static void main(String[] args) {
+  int i = 0;
+  i += 1;
+  i *= 1;
+  System.out.println(i);
+}
+编译后读取class文件输出以下代码：
+public static void main(java.lang.String[]);
+  Code:
+   Stack=2, Locals=2, Args_size=1
+   0:   iconst_0
+   1:   istore_1
+   2:   iinc    1, 1
+   5:   iload_1
+   6:   iconst_1
+   7:   imul
+   8:   istore_1
+   9:   getstatic       #2; //Field java/lang/System.out:Ljava/io/PrintStream;
+   12:  iload_1
+   13:  invokevirtual   #3; //Method java/io/PrintStream.println:(I)V
+   16:  return
+  LineNumberTable: 
+   line 4: 0
+   line 5: 2
+   line 6: 5
+   line 7: 9
+   line 8: 16
+2.1.3. CPU缓存，L1，L2，L3和伪共享
+    http://duartes.org/gustavo/blog/post/intel-cpu-caches/ 
+    http://mechanical-sympathy.blogspot.com/2011/07/false-sharing.html
+2.1.4. 什么是尾递归
+2.1.5. 熟悉位运算
+    用位运算实现加、减、乘、除、取余
+2.1.6. 参考资料
+    http://book.douban.com/subject/1138768/ 
+    http://book.douban.com/subject/6522893/ 
+    http://en.wikipedia.org/wiki/Java_class_file 
+    http://en.wikipedia.org/wiki/Java_bytecode 
+    http://en.wikipedia.org/wiki/Java_bytecode_instruction_listings
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;22-设计模式&quot;&gt;2.2. 设计模式&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2.2.1. 实现AOP
+    CGLIB和InvocationHandler的区别，http://cglib.sourceforge.net/ 
+    动态代理模式
+    Javassist实现AOP，http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/ 
+    ASM实现AOP，http://asm.ow2.org/
+2.2.2. 使用模板方法设计模式和策略设计模式实现IOC
+2.2.3. 不用synchronized和lock，实现线程安全的单例模式
+2.2.4. nio和reactor设计模式
+2.2.5. 参考资料
+    http://asm.ow2.org/ 
+    http://cglib.sourceforge.net/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;23-网络编程知识&quot;&gt;2.3. 网络编程知识&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2.3.1. Java RMI，Socket，HttpClient
+2.3.2. 用Java写一个简单的静态文件的HTTP服务器
+    实现客户端缓存功能，支持返回304
+    实现可并发下载一个文件
+    使用线程池处理客户端请求
+    使用nio处理客户端请求
+    支持简单的rewrite规则
+    上述功能在实现的时候需要满足“开闭原则”
+2.3.3. 了解nginx和apache服务器的特性并搭建一个对应的服务器
+    http://nginx.org/ 
+    http://httpd.apache.org/
+2.3.4. 用Java实现FTP、SMTP协议
+2.3.5. 什么是CDN？如果实现？DNS起到什么作用？
+    搭建一个DNS服务器
+    搭建一个 Squid 或 Apache Traffic Server 服务器
+    http://www.squid-cache.org/ 
+    http://trafficserver.apache.org/ 
+    http://en.wikipedia.org/wiki/Domain_Name_System
+2.3.6. 参考资料
+    http://www.ietf.org/rfc/rfc2616.txt 
+    http://tools.ietf.org/rfc/rfc5321.txt 
+    http://en.wikipedia.org/wiki/Open/closed_principle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;24-框架知识&quot;&gt;2.4. 框架知识&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-$xslt&quot;&gt;spring，spring mvc，阅读主要源码
+ibatis，阅读主要源码
+用spring和ibatis搭建java server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;25-应用服务器知识&quot;&gt;2.5. 应用服务器知识&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-$xslt&quot;&gt;熟悉使用jboss， https://www.jboss.org/overview/ 
+熟悉使用tomcat， http://tomcat.apache.org/ 
+熟悉使用jetty， http://www.eclipse.org/jetty/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;三-高级篇&quot;&gt;三、 高级篇&lt;/h3&gt;
+&lt;h4 id=&quot;31-编译原理知识&quot;&gt;3.1. 编译原理知识&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-$xslt&quot;&gt;3.1.1. 用Java实现以下表达式解析并返回结果（语法和Oracle中的select sysdate-1 from dual类似）
+    sysdate
+    sysdate -1
+    sysdate -1/24
+    sysdate -1/(12*2)
+3.1.2. 实现对一个List通过DSL筛选
+    QList&amp;lt;Map&amp;lt;String, Object&amp;gt;&amp;gt; mapList = new QList&amp;lt;Map&amp;lt;String, Object&amp;gt;&amp;gt;;
+    mapList.add({&quot;name&quot;: &quot;hatter test&quot;});
+    mapList.add({&quot;id&quot;: -1,&quot;name&quot;: &quot;hatter test&quot;});
+    mapList.add({&quot;id&quot;: 0, &quot;name&quot;: &quot;hatter test&quot;});
+    mapList.add({&quot;id&quot;: 1, &quot;name&quot;: &quot;test test&quot;});
+    mapList.add({&quot;id&quot;: 2, &quot;name&quot;: &quot;hatter test&quot;});
+    mapList.add({&quot;id&quot;: 3, &quot;name&quot;: &quot;test hatter&quot;});
+    mapList.query(&quot;id is not null and id &amp;gt; 0 and name like '%hatter%'&quot;);
+    要求返回列表中匹配的对象，即最后两个对象；
+3.1.3. 用Java实现以下程序（语法和变量作用域处理都和JavaScript类似）：
+    代码：
+    var a = 1;
+    var b = 2;
+    var c = function() {
+      var a = 3;
+      println(a);
+      println(b);
+    };
+    c();
+    println(a);
+    println(b);
+    输出：
+    3212
+3.1.4. 参考资料
+    http://en.wikipedia.org/wiki/Abstract_syntax_tree 
+    https://javacc.java.net/ 
+    http://www.antlr.org/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;32-操作系统知识&quot;&gt;3.2. 操作系统知识&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-$xslt&quot;&gt;Ubuntu
+Centos
+使用linux，熟悉shell脚本
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;33-数据存储知识&quot;&gt;3.3. 数据存储知识&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3.3.1. 关系型数据库
+MySQL
+如何看执行计划
+如何搭建MySQL主备
+binlog是什么
+Derby，H2，PostgreSQL
+SQLite
+3.3.2. NoSQL
+Cache
+Redis
+Memcached
+Leveldb
+Bigtable
+HBase
+Cassandra
+Mongodb
+图数据库
+neo4j
+3.3.3. 参考资料
+http://db-engines.com/en/ranking 
+http://redis.io/ 
+https://code.google.com/p/leveldb/ 
+http://hbase.apache.org/ 
+http://cassandra.apache.org/ 
+http://www.mongodb.org/ 
+http://www.neo4j.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;34-大数据知识&quot;&gt;3.4. 大数据知识&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3.4.1. Zookeeper，在linux上部署zk
+3.4.2. Solr，Lucene，ElasticSearch
+    在linux上部署solr，solrcloud，新增、删除、查询索引
+3.4.3. Storm，流式计算，了解Spark，S4
+    在linux上部署storm，用zookeeper做协调，运行storm hello world，local和remote模式运行调试storm topology。
+3.4.4. Hadoop，离线计算
+    Hdfs：部署NameNode，SecondaryNameNode，DataNode，上传文件、打开文件、更改文件、删除文件
+    MapReduce：部署JobTracker，TaskTracker，编写mr job
+    Hive：部署hive，书写hive sql，得到结果
+    Presto：类hive，不过比hive快，非常值得学习
+3.4.5. 分布式日志收集flume，kafka，logstash
+3.4.6. 数据挖掘，mahout
+3.4.7. 参考资料
+    http://zookeeper.apache.org/ 
+    https://lucene.apache.org/solr/ 
+    https://github.com/nathanmarz/storm/wiki 
+    http://hadoop.apache.org/ 
+    http://prestodb.io/ 
+    http://flume.apache.org/
+    http://logstash.net/
+    http://kafka.apache.org/
+    http://mahout.apache.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;35-网络安全知识&quot;&gt;3.5. 网络安全知识&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-$xslt&quot;&gt;3.5.1. 什么是DES、AES
+3.5.2. 什么是RSA、DSA
+3.5.3. 什么是MD5，SHA1
+3.5.4. 什么是SSL、TLS，为什么HTTPS相对比较安全
+3.5.5. 什么是中间人攻击、如果避免中间人攻击
+3.5.6. 什么是DOS、DDOS、CC攻击
+3.5.7. 什么是CSRF攻击
+3.5.8. 什么是CSS攻击
+3.5.9. 什么是SQL注入攻击
+3.5.10. 什么是Hash碰撞拒绝服务攻击
+3.5.11. 了解并学习下面几种增强安全的技术
+    http://www.openauthentication.org/ 
+    HOTP http://www.ietf.org/rfc/rfc4226.txt 
+    TOTP http://tools.ietf.org/rfc/rfc6238.txt 
+    OCRA http://tools.ietf.org/rfc/rfc6287.txt 
+    http://en.wikipedia.org/wiki/Salt_(cryptography)
+3.5.12. 用openssl签一个证书部署到apache或nginx
+3.5.13. 参考资料
+    http://en.wikipedia.org/wiki/Cryptographic_hash_function 
+    http://en.wikipedia.org/wiki/Block_cipher 
+    http://en.wikipedia.org/wiki/Public-key_cryptography 
+    http://en.wikipedia.org/wiki/Transport_Layer_Security 
+    http://www.openssl.org/ 
+    https://code.google.com/p/google-authenticator/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;四-扩展篇&quot;&gt;四、 扩展篇&lt;/h3&gt;
+&lt;h4 id=&quot;41-相关知识&quot;&gt;4.1. 相关知识&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4.1.1. 云计算，分布式，高可用，可扩展
+4.1.2. 虚拟化
+    https://linuxcontainers.org/ 
+    http://www.linux-kvm.org/page/Main_Page 
+    http://www.xenproject.org/ 
+    https://www.docker.io/
+4.1.3. 监控
+    http://www.nagios.org/ 
+    http://ganglia.info/
+4.1.4. 负载均衡
+    http://www.linuxvirtualserver.org/
+4.1.5. 学习使用git
+    https://github.com/ 
+    https://git.oschina.net/
+4.1.6. 学习使用maven
+    http://maven.apache.org/
+4.1.7. 学习使用gradle
+    http://www.gradle.org/
+4.1.8. 学习一个小语种语言
+    Groovy
+    Scala
+    LISP, Common LISP, Schema, Clojure
+    R
+    Julia
+    Lua
+    Ruby
+4.1.9. 尝试了解编码的本质
+    了解以下概念
+    ASCII, ISO-8859-1
+    GB2312, GBK, GB18030
+    Unicode, UTF-8
+    不使用 String.getBytes() 等其他工具类/函数完成下面功能
+    public static void main(String[] args) throws IOException {
+        String str = &quot;Hello, 我们是中国人。&quot;;
+        byte[] utf8Bytes = toUTF8Bytes(str);
+        FileOutputStream fos = new FileOutputStream(&quot;f.txt&quot;);
+        fos.write(utf8Bytes);
+        fos.close();
+    }
+    public static byte[] toUTF8Bytes(String str) {
+        return null; // TODO
+    }
+    想一下上面的程序能不能写一个转GBK的？
+    写个程序自动判断一个文件是哪种编码
+4.1.10. 尝试了解时间的本质
+    时区 &amp;amp; 冬令时、夏令时
+    http://en.wikipedia.org/wiki/Time_zone 
+    ftp://ftp.iana.org/tz/data/asia 
+    http://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E6%99%82%E5%8D%80 
+    闰年， http://en.wikipedia.org/wiki/Leap_year 
+    闰秒， ftp://ftp.iana.org/tz/data/leapseconds 
+    System.currentTimeMillis() 返回的时间是什么
+4.1.11. 参考资料
+    http://git-scm.com/ 
+    http://en.wikipedia.org/wiki/UTF-8 
+    http://www.iana.org/time-zones
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;42-扩展学习&quot;&gt;4.2. 扩展学习&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4.2.1. JavaScript知识
+
+4.2.1.1. 什么是prototype
+
+修改代码，使程序输出“1 3 5”： http://jsfiddle.net/Ts7Fk/
+4.2.1.2. 什么是闭包
+
+看一下这段代码，并解释一下为什么按Button1时没有alert出“This is button: 1”，如何修改：
+http://jsfiddle.net/FDPj3/1/
+4.2.1.3. 了解并学习一个JS框架
+
+    jQuery
+    ExtJS
+    ArgularJS
+4.2.1.4. 写一个Greasemonkey插件
+
+    http://en.wikipedia.org/wiki/Greasemonkey
+4.2.1.5. 学习node.js
+
+    http://nodejs.org/
+4.2.2. 学习html5
+    ArgularJS， https://docs.angularjs.org/api
+4.2.3. 参考资料
+    http://www.ecmascript.org/ 
+    http://jsfiddle.net/ 
+    http://jsbin.com/ 
+    http://runjs.cn/ 
+    http://userscripts.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;五-推荐书籍&quot;&gt;五、 推荐书籍&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;《深入Java虚拟机》
+《深入理解Java虚拟机》
+《Effective Java》
+《七周七语言》
+《七周七数据》
+《Hadoop技术内幕》
+《Hbase In Action》
+《Mahout In Action》
+《这就是搜索引擎》
+《Solr In Action》
+《深入分析Java Web技术内幕》
+《大型网站技术架构》
+《高性能MySQL》
+《算法导论》
+《计算机程序设计艺术》
+《代码大全》
+《JavaScript权威指南》
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Thu, 28 Jun 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/06/28/java-base.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/06/28/java-base.html</guid>
+        
+        
+        <category>JAVA</category>
+        
+      </item>
     
       <item>
         <title>测试页面</title>
         <description>&lt;h1 id=&quot;测试&quot;&gt;测试&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;你好&lt;/li&gt;
+  &lt;li&gt;很好&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -1282,109 +1799,6 @@ test          l2tpd   test            *
         <pubDate>Fri, 30 Dec 2016 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2016/12/30/deploy-l2tp-on-ubuntu.html</link>
         <guid isPermaLink="true">http://localhost:4000/2016/12/30/deploy-l2tp-on-ubuntu.html</guid>
-        
-        <category>Tools</category>
-        
-        
-        <category>工具</category>
-        
-      </item>
-    
-      <item>
-        <title>我使用的收藏，写作和分享工具</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;我日常非工作时间外的学习，基本流程就是收藏，写作和分享，所以我把这三个集合写在一篇文章里面。同时记录下来这个过程，可以让我清晰的知道，我应该在做哪件事情的时候，用哪个工具。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;收藏工具&quot;&gt;收藏工具&lt;/h2&gt;
-
-&lt;p&gt;这个部分准确的说应该是收藏和阅读，因为只收藏不阅读是没有任何意义的。&lt;/p&gt;
-
-&lt;h3 id=&quot;网站的收藏&quot;&gt;网站的收藏&lt;/h3&gt;
-
-&lt;p&gt;网站的收藏我只使用Safari自带的收藏夹，因为它已经完全满足我的要求：添加方便，全设备同步以及检索方便（使用Alfred直接打开）。这里可以看一下我的截图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-safari-favorite-list.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我主力浏览器是Safari，因为在大屏下，侧边栏的存在可以很方便的打开常用网站。另外通过Alfred打开已经保存的网站也非常迅速，如下图：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-open-website-with-alfred.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;文章及微博等收藏&quot;&gt;文章及微博等收藏&lt;/h3&gt;
-
-&lt;p&gt;其他的所有收藏，我都用Instapaper来做，这个软件被Pinterest收购以后Pro功能都免费发布了，简直是良心中的良心。Pro的必备功能包括全文搜索，文章片段高亮以及笔记功能，都可以让阅读和笔记体验提升不少。&lt;/p&gt;
-
-&lt;p&gt;我文章的阅读来源主要是Reeder，然后是微信公众号，知乎，微博和即刻等。因为来源太广，使用这些来源自带的收藏功能经常让我忘了去哪儿找我要的东西。所以我会把它们全部集合到Instapaper中来。&lt;/p&gt;
-
-&lt;p&gt;这里附一张我Reeder的截图:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-reeder-list.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;写作工具&quot;&gt;写作工具&lt;/h2&gt;
-
-&lt;h3 id=&quot;博客写作&quot;&gt;博客写作&lt;/h3&gt;
-
-&lt;p&gt;写公开博客的时候，我对工具只有以下几个要求&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;支持原生Markdown&lt;/li&gt;
-  &lt;li&gt;支持显示文章TOC&lt;/li&gt;
-  &lt;li&gt;支持文件管理&lt;/li&gt;
-  &lt;li&gt;可以灵活导出到其他格式&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;尝试过Ulyssess，Quiver，Day One等工具之后，我选择了&lt;strong&gt;MWweb&lt;/strong&gt;。MWeb的使用体验非常棒，这里是我写这篇文章时的截图&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-mweb-writing-screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;可以看出几乎满足了我的所有要求，左边我导入了我存放博文的github本地目录，然后直接可以添加文件和书写，创建文件的时候还自动帮我以当前日期命名。我现在博客的格式几乎与此如出一辙，也是我最喜欢的管理和阅读布局。右边栏有我当前文章的目录，可以在不同的子标题间方便地跳转。&lt;/p&gt;
-
-&lt;p&gt;对于导出部分来说，MWeb也做的面面俱到，大部分我使用的格式都包含了进去。值得一提的是MWeb对于Evernote的支持非常好，格式速度管理都很不错，大家可以试试。&lt;/p&gt;
-
-&lt;p&gt;P.S. 我博客里的图片都是通过之前的&lt;a href=&quot;/2015/01/10/use-dropzone-and-qiniu-to-store-blog-images.html&quot;&gt;一个工具&lt;/a&gt;上传到七牛，然后直接粘贴到这里的。&lt;/p&gt;
-
-&lt;h3 id=&quot;知识总结&quot;&gt;知识总结&lt;/h3&gt;
-
-&lt;p&gt;对于总结性的笔记，整理和检索的需求比书写方便更为重要，因为总结的目的本来就是为了以后用到的时候方便立刻找到。从这方面来说，至今没有发现一个软件可以比得上Evernote。这里是我的笔记一览：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-evernote-list.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;这张图暴露了我是一个CS找工作狗 0_0 刷题真是没有办法的事情啊，北美面试全是算法题… 然后下图是我如何使用标签搜索笔记:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-evernote-tag-list.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Evernote在检索上也是做到最好的了，其中还包括了PDF和图片的搜索，都是瞬间完成。下图是Evernote自带搜索框，Alfred的我就不贴了，也支持标题搜索和内容搜索。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-evernote-search-way.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Evernote的使用，我仅限于上述提到的，最多再有一个多平台同步。对于它推崇的剪藏及其他快速笔记的功能我一概不用，因为我得确保自己知识库里面的东西，都是认真整理过的。&lt;/p&gt;
-
-&lt;h3 id=&quot;片段笔记&quot;&gt;片段笔记&lt;/h3&gt;
-
-&lt;p&gt;有时候也经常需要片段的笔记，比如一个人给你发了一个地址，或者你脑海里突然有一个念头。如果我在使用Mac，那么Unclutter已经足够好用了，鼠标移动到顶栏，下滑，笔记即可。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-unclutter-screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果是在手机上需要记录或者一些稍微重要点的事情或者日记，那么Day One是我的不二选择。这个软件自动帮你标记好所有你记录片段时的状态，包含日期，GPS，当天天气（虽然可能不需要 -_-）。另外在Mac下顶栏的快捷访问方式也非常方便（这里不附图了，因为敏感信息太多）。&lt;/p&gt;
-
-&lt;h2 id=&quot;分享工具&quot;&gt;分享工具&lt;/h2&gt;
-
-&lt;h3 id=&quot;博客发布&quot;&gt;博客发布&lt;/h3&gt;
-
-&lt;p&gt;博客我使用Github + Jekyll来生成，所以没有什么步骤，只要写好文章以后去命令行push一下就好。本来这个过程也可以通过一些工具来简化的，但是我觉得提交过程还是检查一下的好。&lt;/p&gt;
-
-&lt;h3 id=&quot;微博twitter分享&quot;&gt;微博/Twitter分享&lt;/h3&gt;
-
-&lt;p&gt;Mac下的各个软件已经把分享功能做的比较简单了，这里我分享一下Mac侧边栏的快速分享。这里可以简单快速的写一些东西发布到各个社交网站，把Social组件加进来即可。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://7u2ho6.com1.z0.glb.clouddn.com/tool-my-notification-share.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如果涉及到图片的分享，也可以使用Dropzone的扩展来做，直接拖图片到相应扩展即可。目前只有Twitter分享的扩展，如果有时间我可以写一个Weibo的。&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 09 Nov 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/11/09/my-writing-tools.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/11/09/my-writing-tools.html</guid>
         
         <category>Tools</category>
         
